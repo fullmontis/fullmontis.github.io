@@ -1,4 +1,6 @@
 body{ margin:1em auto; margin-bottom: 5em; max-width:40em; padding:0 .62em;
       font:1.2em/1.5 serif; }
+#nav li { display: inline;}
+#nav li+li::before { content: " | "; }
 h1,h2,h3 { line-height:1.2em; }
 @media print{ body{ max-width:none } }
