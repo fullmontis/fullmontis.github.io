@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://fullmontis.com/sitemap.xml

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>fullmontis</title>
+  <link>https://fullmontis.com</link>
+  <description>Updates on fullmontis' work</description>
+    <image>
+     <url>https://fullmontis.com/icons/fullmontis.svg</url>
+     <title>fullmontis</title>
+     <link>https://fullmontis.com</link>
+   </image>
+  <!--add-->
+  <item>
+    <title></title>
+    <link>https://fullmontis.com/</link>
+    <description></description>
+    <pubDate></pubDate>
+  </item>
+  <item>
+    <title></title>
+    <link>https://fullmontis.com/</link>
+    <description></description>
+    <pubDate></pubDate>
+  </item>
+  <item>
+    <title></title>
+    <link>https://fullmontis.com/</link>
+    <description></description>
+    <pubDate></pubDate>
+  </item>
+  <item>
+    <title></title>
+    <link>https://fullmontis.com/</link>
+    <description></description>
+    <pubDate></pubDate>
+  </item>
+  <item>
+    <title></title>
+    <link>https://fullmontis.com/</link>
+    <description></description>
+    <pubDate></pubDate>
+  </item>
+</channel>
+
+</rss> 
