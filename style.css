@@ -8,7 +8,8 @@ body { width: 100%;
        color: #111;
        line-height: 1.7em; }
 
-a { color: #631d1d;; }
+a { color: #b14646; transition: color 0.5s ease-in; }
+a:hover { color: #e16e6e; }
 
 h1,h2,h3 { line-height:1.2em;
 	   font-weight: bold;
