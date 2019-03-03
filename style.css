@@ -143,8 +143,7 @@ p { width: 100%;
     width: 90vw;
     height: auto;
     display: inline-block;
-    border: 1px solid #333;
-    box-shadow: 3px 3px 3px 0px #555;
+/*    border: 1px solid #333;*/
     margin: 0.1em;
 }
 #showimage { position: fixed;

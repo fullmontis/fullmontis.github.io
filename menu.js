@@ -20,7 +20,6 @@ function hideMenu() {
     for( var i=0; i<submenus.length; i++ ) {
 	submenus[i].getElementsByClassName("navbar")[0].classList.add("hide");
     }
-    console.log("OK");
 }
 
 for( var i=0; i<submenus.length; i++ ) {
