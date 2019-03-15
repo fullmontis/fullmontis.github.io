@@ -3,54 +3,71 @@
 	xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!--add-->
   <url>
-    <loc>https://fullmontis.com/games/fallen-girl</loc>
-    <lastmod>2019-03-01T23:55:41+01:00</lastmod>
+    <loc>https://fullmontis.com/blog/</loc>
+    <lastmod>2019-03-15T20:15:59+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+  </url>
+  <url>
+    <loc>https://fullmontis.com/blog/2019/03/15/how-to-make-a-website-from-scratch-and-still-survive-somehow/</loc>
+    <lastmod>2019-03-15T20:15:59+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://fullmontis.com/blog/2019/03/15/how-to-make-a-website-from-scratch-and-still-survive-somehow/girl-programming.png</image:loc>
+      <image:title>Cartoon girl programming html code on a computer</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fullmontis.com/games/fallen-girl/</loc>
+    <lastmod>2019-03-15T20:15:58+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     
     <image:image>
-      <image:loc>https://fullmontis.com/games/fallen-girl/1.png</image:loc>
+      <image:loc>https://fullmontis.com/games/fallen-girl//1.png</image:loc>
       <image:caption>Fallen Girl Screenshot 1</image:caption>
       <image:title>Life is hard</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://fullmontis.com/games/fallen-girl/2.png</image:loc>
+      <image:loc>https://fullmontis.com/games/fallen-girl//2.png</image:loc>
       <image:caption>Fallen Girl Screenshot 2</image:caption>
       <image:title>She likes to jump around</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://fullmontis.com/games/fallen-girl/3.png</image:loc>
+      <image:loc>https://fullmontis.com/games/fallen-girl//3.png</image:loc>
       <image:caption>Fallen Girl Screenshot 3</image:caption>
       <image:title>Taking a nap</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://fullmontis.com/games/fallen-girl/4.png</image:loc>
+      <image:loc>https://fullmontis.com/games/fallen-girl//4.png</image:loc>
       <image:caption>Fallen Girl Screenshot 4</image:caption>
       <image:title>It's hard to see with only one eye...</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://fullmontis.com/games/fallen-girl/fallen-girl.jpg</image:loc>
+      <image:loc>https://fullmontis.com/games/fallen-girl//fallen-girl.jpg</image:loc>
       <image:caption>Fallen Girl Cover Image</image:caption>
       <image:title>She's falling towards a new adventure</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://fullmontis.com/games/</loc>
-    <lastmod>2019-03-01T23:55:41+01:00</lastmod>
+    <lastmod>2019-03-15T20:15:58+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     
   </url>
   <url>
     <loc>https://fullmontis.com/</loc>
-    <lastmod>2019-03-02T18:55:41+01:00</lastmod>
+    <lastmod>2019-03-15T20:15:58+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     
   </url>
   <url>
     <loc>https://fullmontis.com/art/</loc>
-    <lastmod>2019-03-03T01:20:40+01:00</lastmod>
+    <lastmod>2019-03-15T20:15:58+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     
@@ -108,10 +125,10 @@
     </image:image>
   </url>
   <url>
-    <loc>https://fullmontis.com/about</loc>
-    <lastmod>2019-03-01T23:55:40+01:00</lastmod>
+    <loc>https://fullmontis.com/about/</loc>
+    <lastmod>2019-03-15T20:15:58+01:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.9</priority>
     
   </url>
 </urlset>

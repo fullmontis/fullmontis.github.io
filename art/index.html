@@ -234,7 +234,6 @@
     <meta property="og:description" content="Digital and traditional art created by fullmontis, focused around anime and cartoon styles." />
     <meta property="og:image" content="https://fullmontis.com/art/thumb/girl.jpg" />
     
-    
     <meta name="keywords" content="anime, cute,girl, illustration, digital painting" />
     <meta name="description" content="Digital and traditional art created by fullmontis, focused around anime and cartoon styles." />
     <meta name="author" content="fullmontis" />
@@ -255,16 +254,19 @@
   <body>
 
 <nav id="header">
-  <span id="sitetitle"><a href="/" title="fullmontis">fullmontis</a></span>
+  <a id="sitetitle" href="/" title="fullmontis"><img
+  src="/icons/fullmontis-nav.svg" alt="fullmontis" />fullmontis</a>
 
   <input type="checkbox" name="mainmenu" id="mainmenu"/>
   <label for="mainmenu"></label>
+  
   <ul id="nav">
-    <li><a href="/art" title="Art by fullmontis">Art</a>
+    <li><a href="/art/" title="Art by fullmontis">Art</a>
+    <li><a href="/blog/" title="Blog by fullmontis">Blog</a>
     </li><li class="submenu"><a>Games</a>
     <ul class="navbar hide">
-      <li><a href="/games/fallen-girl" title="Fallen Girl by fullmontis">Fallen Girl</a></li>
-      <li><a href="/games" title="Games by fullmontis">See All</a></li>
+      <li><a href="/games/fallen-girl/" title="Fallen Girl by fullmontis">Fallen Girl</a></li>
+      <li><a href="/games/" title="Games by fullmontis">See All</a></li>
       
     </ul>
  <!--  </li><li class="submenu"><a>Visual Novels</a>
@@ -279,7 +281,7 @@
            <li><a href="/visual-novels" title="Visual Novels by fullmontis">See All</a></li>
   </ul>-->
 
-  </li><li><a href="/about" title="About fullmontis">About</a>
+  </li><li><a href="/about/" title="About fullmontis">About</a>
   </li><!--<li><a href="/rss" title="fullmontis News and Updates">RSS</a></li>-->
   </ul>
 </nav>
@@ -289,7 +291,7 @@
 	
 
     <div class='content'>
-      <h1>Art</h1>
+      <h1>Art by fullmontis</h1>
       <p>Click on the thumbnails for higher quality.</p>
     </div>
     
@@ -326,15 +328,16 @@
     <div id='showimage' class='hide'><img id='imgbig'
 					  src='icons/wait.svg' /></div>
     
-    <div class='content'>
+   <!-- <div class='content'>
       <img src='/icons/fullmontis.svg' alt='fullmontis logo' id='mainlogo' />
-    </div>
+    </div>-->
 
 
 	<hr id="hrfooter"/>
-
 	<ul id="footer">
+	  <li id="liprev"></li>
 	  <li id="litop"><a href="#">Top</a></li>
+	  <li id="linext"></li>
 	</ul>
 	<script type="text/javascript" src="/menu.js"></script>
       </div>
