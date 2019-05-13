@@ -32,26 +32,45 @@ document.getElementById("docbody").addEventListener("click", hideMenu);
 // image display
 
 var view = document.getElementById("showimage");
-if( view !== null ) {
-    var bigimg = document.getElementById("imgbig");
-    function openView(toggle, img) {
-	return function() {
-	    if( toggle ) {
-		bigimg.src = img.dataset.src;
-		view.classList.remove("hide");
-	    } else {
-		view.classList.add("hide");
-	    }
-	};
-    }
+var bigimg = document.getElementById("imgbig");
 
-    view.addEventListener("click", openView(false,"wait.svg"));
+if( view !== null ) {
+    
+    view.addEventListener("click", openView(false,"wait.svg", view, false));
+
     var thumbs = document.getElementsByClassName("thumb");
     var screenshots = document.getElementsByClassName("screenshot");
+    var comics = document.getElementsByClassName("comic-thumb");
+
     for( var i=0; i<thumbs.length; i++ ) {
-	thumbs[i].addEventListener("click", openView(true, thumbs[i]));
+	thumbs[i].addEventListener("click", openView(true, thumbs[i], view, false));
     }
     for( var i=0; i<screenshots.length; i++ ) {
-	screenshots[i].addEventListener("click", openView(true, screenshots[i]));
+	screenshots[i].addEventListener("click", openView(true, screenshots[i], view, false));
+    }
+    for( var i=0; i<comics.length; i++ ) {
+	comics[i].addEventListener("click", openView(true, comics[i], view, true));
     }
 }
+
+function openView(toggle, img, dest, isComic) {
+    return function() {
+	console.log(dest);
+	if( toggle ) {
+	    if( isComic ) {
+		bigimg.classList.remove("artimg");
+		bigimg.classList.add("comicimg");
+	    } else {
+		bigimg.classList.remove("comicimg");
+		bigimg.classList.add("artimg");
+	    }
+	    bigimg.src = img.dataset.src;
+	    dest.classList.remove("hide");
+	    dest.scrollTop = 0;
+	    
+	} else {
+	    dest.classList.add("hide");
+	}
+    };
+}
+

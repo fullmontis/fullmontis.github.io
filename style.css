@@ -13,13 +13,13 @@ a:hover { color: #e16e6e; }
 
 h1,h2,h3 { line-height:1.2em;
 	   font-weight: bold;
-	   font-size: 1.4em;
-	   margin-top: 2.4em;
-	   margin-bottom: 1em;
+	   font-size: 1.4rem;
+	   margin-top: 1.3rem;
+	   margin-bottom: 1.3rem;
 	   color: #333;}
-h1 { margin-top: 1em; font-size: 2em;}
-h2 { font-size: 1.1em;  }
-h3 { font-size: 1.05em; }
+h1 { margin-top: 1rem; font-size: 2rem;}
+h2 { font-size: 1.7rem;  }
+h3 { font-size: 1.05rem; }
 
 ul { width: 90%;
      padding-left: 0.8em;}
@@ -104,10 +104,9 @@ p { width: 100%;
 	   margin-right: auto;
 	   padding: 0.5em;}
 
+#footerlink { width: 100%; text-align: center;}
 #footer { width: auto;
-	    max-width: 80%;
-	    padding-left: 0%;
-	    padding-right: 10%;
+	    max-width: 90vw;
 	    margin-left: auto;
 	    margin-right: auto; text-align: center; }
 
@@ -115,9 +114,9 @@ p { width: 100%;
 	       width: 30% }
 
 #footer > li::before { content: ""; }
-#liprev { text-align: left; width: 30%; float: left; min-width: 200px; display: inline-block;}
-#litop  { text-align: center; width: 30%; float: center; min-width: 200px; display: inline-block;}
-#linext { text-align: right; width: 30%; float: right;  min-width: 200px;display: inline-block;}
+#liprev { text-align: left; width: 30%; float: left; min-width: 100px; display: inline-block;}
+#litop  { text-align: center; width: 30%; float: center; min-width: 100px; display: inline-block;}
+#linext { text-align: right; width: 30%; float: right;  min-width: 100px;display: inline-block;}
 #liprev a[href='']{ display: none; }
 #linext a[href='']{ display: none; }
 
@@ -146,13 +145,14 @@ pre {
 
 #mainlogo { width: 150px;
 	    display:block;
-	    margin: 1em auto;}
+	    margin: 1em auto;
+	    margin-bottom: 0.5em;}
 
 #menubutton { display: block; width: 40px; float: right; margin-top: 5px;}
 #closemenu { width: 40px; float: right;}
-
-#imgcontainer { margin: auto; width: 90vw; 
-		padding-top: 1em; vertical-align: top;}
+#maincontainer { margin-left: 5vw;
+		 margin-right: 5vw; }
+#imgcontainer { margin: auto; width: 90%; vertical-align: top;}
 .cover {
     margin: auto; display: block; width: 100%; max-width: 300px;
 }
@@ -162,7 +162,7 @@ pre {
 .thumb {
     max-width: 300px;
     max-height: 300px;
-    width: 90vw;
+    width: 40vw;
     height: auto;
     display: inline-block;
 /*    border: 1px solid #333;*/
@@ -172,14 +172,14 @@ pre {
 	     background-color: rgba(10,10,10,0.8);
 	     width: 100vw;
 	     height: 100vh;
-	     display: block; top:0; left:0;}
-#imgbig { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;margin: auto;   }
+	     display: block; top:0; left:0;
+	     overflow: scroll;}
+.artimg { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; margin: auto;   }
+.comicimg { max-width: 100%;  width: auto;  display: block; margin: auto;   }
 .hide { display: none !important; }
-
 .banner { max-width: 650px;
 	  width: 100%;
 	  height: auto; }
-
 dt { font-weight: bold; float: left; padding-right: 1em;}
 
 .screenshot { width: 80%; height: auto; margin: 0.4em; margin: 0.5em auto; display: block;  }
@@ -214,15 +214,18 @@ dt { font-weight: bold; float: left; padding-right: 1em;}
 	      width: 300px;}
     .navbar > li { border-bottom: 2px solid #5d4c4c; }
     #nav > li:hover > .navbar { display: block !important; }
-    .content { max-width: 650px; padding: 0; padding-right: 12%; }
+    .content { max-width: 650px; padding: 0;  }
     #footer { width: 650px; }
     #imgcontainer {  }
+    #maincontainer { margin-left: 1vw; margin-right: 1vw;}
+    .part { width: 98vw !important; }
     #mainmenu { display: none; }
     #mainmenu + label { display: none !important; }
     .screenshot { width: 40%; max-width: 300px; display: inline-block; }
     .card { max-width: 300px; }
     .cardimage {  }
     .cardtitle { }
+    .thumb { width: 100%; }
 }
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
 @media (min-width:1281px) { /* hi-res laptops and desktops */ }
@@ -243,3 +246,40 @@ dt { font-weight: bold; float: left; padding-right: 1em;}
 
 #mainmenu:checked + label + ul { display: block; }
 
+.inline { list-style-type: none; text-align: center; }
+.inline li { display: inline; }
+.inline li::before { content: none; }
+.inline li:after { content: " | "; padding-right: 0.6em; padding-left: 0.6em;  }
+.inline li:last-child:after { content: none; }
+
+
+.part {
+    width: 90vw;
+    max-width: 650px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    text-align: center
+}
+.artcontainer {
+    max-width: 95vw;
+}
+.block {
+    vertical-align: top;
+    width: 90%;
+    max-width: 400px;
+    margin-left: 3%; margin-right: 3%;
+    margin-bottom: 2rem;
+    text-align: left;
+    display: inline-block;
+}
+.mainthumb {
+    width: 100%;
+    margin-left: auto; margin-right: auto;
+    display: block;
+}
+
+.sectiontitle { text-align: center; margin-bottom: 1.2rem;}
+.sectiontitle h2 { margin-bottom: 0em; }
+.elements {
+    text-align: center;
+}
