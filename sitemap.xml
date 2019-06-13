@@ -4,25 +4,17 @@
   <!--add-->
   <url>
     <loc>https://fullmontis.com/</loc>
-    <lastmod>2019-05-21T21:52:05+02:00</lastmod>
+    <lastmod>2019-06-13T18:12:29+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
     
     <image:image>
+      <image:loc>https://fullmontis.com/art/full/sonia.jpg</image:loc>
+      <image:title>Sonia (Pokemon)</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://fullmontis.com/art/full/toga.jpg</image:loc>
       <image:title>Himiko Toga</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fullmontis.com/art/full/cheryltomb.jpg</image:loc>
-      <image:title>Cheryls Regret</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fullmontis.com/art/full/cherylfile.jpg</image:loc>
-      <image:title>Cheryl</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fullmontis.com/art/full/scarlet.jpg</image:loc>
-      <image:title>Scarlet</image:title>
     </image:image>
     <image:image>
       <image:loc>https://fullmontis.com/art/full/azzurra.jpg</image:loc>
@@ -49,32 +41,12 @@
       <image:title>Soft Lips</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://fullmontis.com/art/full/bed.jpg</image:loc>
-      <image:title>Smoking</image:title>
-    </image:image>
-    <image:image>
       <image:loc>https://fullmontis.com/art/full/girl.jpg</image:loc>
       <image:title>Short Hair</image:title>
     </image:image>
     <image:image>
       <image:loc>https://fullmontis.com/art/full/goth.jpg</image:loc>
       <image:title>Goth Girl</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fullmontis.com/art/full/peniparker.jpg</image:loc>
-      <image:title>Smallest High Five Ever</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fullmontis.com/art/full/peni.jpg</image:loc>
-      <image:title>Peni Parker</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fullmontis.com/art/full/elf.jpg</image:loc>
-      <image:title>Christmas Elf Girl</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fullmontis.com/art/full/christmas.jpg</image:loc>
-      <image:title>Candy Cane</image:title>
     </image:image>
   </url>
 </urlset>
