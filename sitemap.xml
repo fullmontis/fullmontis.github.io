@@ -4,25 +4,21 @@
   <!--add-->
   <url>
     <loc>https://fullmontis.com/</loc>
-    <lastmod>2019-07-05T14:06:41+02:00</lastmod>
+    <lastmod>2019-08-26T19:00:37+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
     
     <image:image>
+      <image:loc>https://fullmontis.com/art/full/curly.jpg</image:loc>
+      <image:title>Curly Brace (Cave Story)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fullmontis.com/art/full/cherylstand.jpg</image:loc>
+      <image:title>Cheryl the Vampire</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://fullmontis.com/art/full/sonia.jpg</image:loc>
       <image:title>Sonia (Pokemon)</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fullmontis.com/art/full/toga.jpg</image:loc>
-      <image:title>Himiko Toga</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fullmontis.com/art/full/azzurra.jpg</image:loc>
-      <image:title>Azzurra</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fullmontis.com/art/full/reading.jpg</image:loc>
-      <image:title>Girl Reading</image:title>
     </image:image>
     <image:image>
       <image:loc>https://fullmontis.com/art/full/whitemage.jpg</image:loc>
@@ -35,18 +31,6 @@
     <image:image>
       <image:loc>https://fullmontis.com/art/full/playing.jpg</image:loc>
       <image:title>Playing Quake</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fullmontis.com/art/full/yuri.jpg</image:loc>
-      <image:title>Soft Lips</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fullmontis.com/art/full/girl.jpg</image:loc>
-      <image:title>Short Hair</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fullmontis.com/art/full/goth.jpg</image:loc>
-      <image:title>Goth Girl</image:title>
     </image:image>
   </url>
 </urlset>
