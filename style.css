@@ -200,7 +200,7 @@ dt { font-weight: bold; float: left; padding-right: 1em;}
 @media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
 @media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
 @media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
-@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:1000px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
     #menubutton { display: none; }
     #nav { display: inline-block;
 	   width: auto;
