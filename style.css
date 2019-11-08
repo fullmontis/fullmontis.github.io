@@ -294,3 +294,5 @@ dt { font-weight: bold; float: left; padding-right: 1em;}
 
 .leftaligned {text-align: left; }
 .centered { margin-left: auto; margin-right: auto;}
+
+.container1 { width: 90vw; max-width: 600px; display: inline-block; }
