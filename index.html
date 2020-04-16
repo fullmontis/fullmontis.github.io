@@ -114,8 +114,8 @@
 			"url": "https://fullmontis.com/",
 			"name": "fullmontis - I make games and visual novels and draw girls",
 			"description": "Art, games and visual novels by fullmontis",
-			"datePublished": "2020-03-19T01:18:24+01:00",
-			"lastReviewed": "2020-03-19T01:18:24+01:00",
+			"datePublished": "2020-04-16T22:07:42+02:00",
+			"lastReviewed": "2020-04-16T22:07:42+02:00",
 			"creator": {
 			    "@type": "Person",
 			    "name": "Andrea Montagna",
@@ -362,8 +362,7 @@
   <p><b><i>Do you take free requests?</i></b></p>
   <p>No, sorry.</p>
   <p><b><i>Can I draw fanart of your OCs?</i></b></p>
-  <p>Yes! I love fanart. Be sure to mention me so that I
-  can retweet you!</p>
+  <p>Yes, please! I love fanart!</p>
   <p><b><i>Do you do art trades?</i></b></p>
   <p>Sure! Let me know if you are interested.</p>
 </div>
@@ -372,7 +371,56 @@
 
 </div>
 </div>
-  <script type='text/javascript'>	
+
+<hr id="hrfooter"/>
+<!--	<ul id="footer">
+	<li id="liprev"><a href="{{prev-link}}"></a></li>
+	  <li id="litop"><a href="#">Top</a></li>
+	  <li id="linext"><a href="{{prev-link}}"></a></li>
+	</ul>
+-->
+<div id='footerlink'><a href="#">Top</a> - <a
+href="#" onclick="togglePrivacy(); return false;">Privacy</a></span>
+<div id="privacy" style="display: none">
+<h3>Privacy</h3>
+
+<p>fullmontis.com is a static HTML webpage and as such it does
+not collect any information for advertising, logging, commenting or
+any other data collection related activities. It does not store
+cookies and it does not use third party software that may use
+them.</p><p>
+
+The website is hosted using GitHub Pages, and as the data processors
+for this website they may hold onto certain information for legal and
+security reasons. From their <a
+href="https://help.github.com/en/github/site-policy/github-privacy-statement"
+rel="nofollow" target="_blank">Privacy Policy</a>:</p>
+
+<quote><i>Please note that GitHub may collect User Personal Information
+from visitors to your GitHub Pages website, including logs of visitor
+IP addresses, to comply with legal obligations, and to maintain the
+security and integrity of the Website and the Service.</i></quote>
+<p>
+If for any reason you want to act on any personal data collected on
+fullmontis.com, please <a href="" id="cont3">contact me</a> for any
+information and action regarding it.
+</p>
+
+<p><a href="#" onclick="togglePrivacy();return false;">Close</a></p>
+</div>
+  <script type='text/javascript'>
+  
+  function togglePrivacy(){
+  var d = document.getElementById("privacy");
+  if( d.style.display == "none" ) {
+  d.style.display = "block";
+} else {
+  d.style.display = "none";
+}
+return false;
+}
+
+
   var a='mon';			
   var b='ful';
   var c='l';
@@ -382,6 +430,10 @@
   var h='@';
   var s='mai';
   var t='lto:';
+  cont3 = document.getElementById('cont3')
+  if( cont3 !== null ) {
+  cont3.href=s+t+b+c+a+g+h+d+e;
+  }
   cont2 = document.getElementById('cont2')
   if( cont2 !== null ) {
   cont2.href=s+t+b+c+a+g+h+d+e;
@@ -391,18 +443,7 @@
   if( cont !== null ) {
   cont.href=s+t+b+c+a+g+h+d+e;
   }
-  //document.getElementById('cont').innerHTML='Email';
-  //document.getElementById('cont1').innerHTML=b+c+a+g+h+d+e;
 </script>
-
-<hr id="hrfooter"/>
-<!--	<ul id="footer">
-	<li id="liprev"><a href="{{prev-link}}"></a></li>
-	  <li id="litop"><a href="#">Top</a></li>
-	  <li id="linext"><a href="{{prev-link}}"></a></li>
-	</ul>
--->
-<div id='footerlink'><a href="#">Top</a></span>
 	<script type="text/javascript" src="/menu.js"></script>
       </div>
     </body>
