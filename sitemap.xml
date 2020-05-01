@@ -4,14 +4,10 @@
   <!--add-->
   <url>
     <loc>https://fullmontis.com/</loc>
-    <lastmod>2020-04-16T22:07:42+02:00</lastmod>
+    <lastmod>2020-05-01T12:51:03+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
     
-    <image:image>
-      <image:loc>https://fullmontis.com/art/full/halloween.jpg</image:loc>
-      <image:title>Happy Halloween</image:title>
-    </image:image>
     <image:image>
       <image:loc>https://fullmontis.com/art/full/cherylstand.jpg</image:loc>
       <image:title>Cheryl the Vampire</image:title>
