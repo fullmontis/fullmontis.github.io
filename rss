@@ -10,37 +10,7 @@
      <title>fullmontis</title>
      <link>https://fullmontis.com</link>
    </image>
-  <!--add-->
-  <item>
-    <title></title>
-    <link>https://fullmontis.com/</link>
-    <description></description>
-    <pubDate></pubDate>
-  </item>
-  <item>
-    <title></title>
-    <link>https://fullmontis.com/</link>
-    <description></description>
-    <pubDate></pubDate>
-  </item>
-  <item>
-    <title></title>
-    <link>https://fullmontis.com/</link>
-    <description></description>
-    <pubDate></pubDate>
-  </item>
-  <item>
-    <title></title>
-    <link>https://fullmontis.com/</link>
-    <description></description>
-    <pubDate></pubDate>
-  </item>
-  <item>
-    <title></title>
-    <link>https://fullmontis.com/</link>
-    <description></description>
-    <pubDate></pubDate>
-  </item>
+  
 </channel>
 
 </rss> 
