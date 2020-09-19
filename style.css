@@ -209,7 +209,7 @@ dt { font-weight: bold; float: left; padding-right: 1em;}
 @media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
 @media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
 @media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
-@media (min-width:1000px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:1200px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
     body { background-position: right bottom; background-size: 100vh;}
     #menubutton { display: none; }
     #nav { display: inline-block;
@@ -274,7 +274,7 @@ dt { font-weight: bold; float: left; padding-right: 1em;}
     width: 90vw;
     max-width: 600px;
     display: inline-block;
-    margin-bottom: 1.5rem;
+    margin-bottom: 4rem;
     text-align: center;
     vertical-align: top;
 }
@@ -309,10 +309,12 @@ dt { font-weight: bold; float: left; padding-right: 1em;}
 .container1 { width: 90vw; max-width: 600px; display: inline-block; }
 
 #privacy { width: 90vw; max-width: 500px; margin: 0 auto; text-align: left; }
-.blog-title { margin-top: 70px; margin-bottom: 0px;}
+.blog-title { margin-top: 70px; margin-bottom: 0px;  }
 .blog-time { margin-top: 5px; margin-bottom: 5px; display:inline-block; font-size:0.9em; color: #a184b9;}
 .content-blog { max-width: 700px;
 	   margin-left: auto;
 	   margin-right: auto;
 	   padding: 0.5em;
-	   margin-bottom: 5em; text-align: left;}
+	   margin-bottom: 2em; text-align: left;}
+.title-link { text-decoration: none; }
+hr.blog-hr { border: 1px solid #4e426d; max-width: 700px;  }
