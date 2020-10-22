@@ -15,6 +15,7 @@ body { width: 100%;
 
 a { color: #d799c1; transition: color 0.5s ease-in; text-decoration-color: #d799c1aa;}
 a:hover { color: #ac99e4; }
+b { color: #ddb5ec; }
 blockquote { background-color: #3f3557; margin: 0; margin-top:1.3em; margin-bottom: 1.3em;  padding: 1em; font-style: italic; color: #d1c6dd; }
 h1,h2,h3 { line-height:1.2em;
 	   font-weight: bold;
