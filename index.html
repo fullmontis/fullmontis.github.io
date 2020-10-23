@@ -103,8 +103,8 @@
 			"url": "https://fullmontis.com/",
 			"name": "Cute Games and Visual Novels",
 			"description": "",
-			"datePublished": "2020-10-23T00:45:22.335890+02:00",
-			"lastReviewed": "2020-10-23T00:45:22.335890+02:00",
+			"datePublished": "2020-10-23T15:32:40.684714+02:00",
+			"lastReviewed": "2020-10-23T15:32:40.684714+02:00",
 			"creator": {
 			    "@type": "Person",
 			    "name": "Andrea Montagna",
@@ -203,7 +203,7 @@
       ><li><a href='https://twitter.com/fullmontis' title='Twitter (Game Development)'>Twitter</a></li
       ><!--<li><a href='https://twitter.com/fullmontisdraws' title='Twitter (Art)'>Twitter(Art)</a></li
       >--><li><a href='https://www.youtube.com/channel/UCvInceiOOPs2XCalB-mQV0g' title='YouTube'>Youtube</a></li
-      ><li><a href="#" id="discord-link">discord</a></li>
+      ><li><a href="javascript:void(0)" id="discord-link">discord</a></li>
     </ul>
     <p>Hi, I'm fullmontis! I make games, draw illustrations and write stories.</p>
   </div>
@@ -323,7 +323,7 @@
     <ul>
       <li>purchase something from my <a href="https://fullmontis.itch.io" target="_blank">Itch</a> or <a href="https://gumroad.com/fullmontis" target="_blank">Gumroad</a> pages</li>
       <li><a href="#commission">commission</a> an illustration</li>
-      <li>donate on <a href="https://ko-fi.com/fullmontis">ko-fi</a> or with <a href="bitcoin:1Cg68icmpVJPHNjeHLf91zTa2RBSMGHizX">BitCoin</a><!-- at the address <blockquote>1Cg68icmpVJPHNjeHLf91zTa2RBSMGHizX</blockquote>--></li>
+      <li>donate on <a href="https://ko-fi.com/fullmontis">ko-fi</a> or with <a id="btclink" href="javascript:void(0)">BitCoin</a><blockquote id="btcimg">1Cg68icmpVJPHNjeHLf91zTa2RBSMGHizX <img src="/icons/btc.png"/></blockquote></li>
     </ul>
     <!--<p>I am also open to paid gigs, writing or drawing, for games, visual novels, or comics. <a href="#contact">Contact me!</a></p>-->
   </div>
@@ -451,8 +451,21 @@ return false;
         } else {
             discord_link.innerHTML = "discord";
         }
-        console.log("OK");
     };
+
+// toggle bitcoin address and qrcode
+var btc_link = document.getElementById('btclink');
+var btc_img  = document.getElementById('btcimg');
+var btc_close  = document.getElementById('btcclose');
+var btc_toggle = false;
+btc_link.onclick = function() {
+btc_toggle = !btc_toggle;
+if( btc_toggle ) {
+btc_img.style["display"] = "block";
+} else {
+btc_img.style["display"] = "none";
+}
+};
 
 </script>
 

@@ -323,4 +323,4 @@ p.wide{ margin-bottom: 4em;}
 /*.links li:after { content: " | "; color: #7e526e; }*/
 .links li a { text-decoration: none; }
 
-
+#btcimg{ display: none; text-align: center; font-size: 0.8em;}
