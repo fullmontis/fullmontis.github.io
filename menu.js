@@ -1,33 +1,36 @@
 // menu management
 
-var submenus = document.getElementsByClassName("submenu");
+// var submenus = document.getElementsByClassName("submenu");
 
-function showMenu() {
-    for( var i=0; i<submenus.length; i++ ) {
-	if( submenus[i].menuNumber != this.menuNumber ) {
-	    submenus[i].getElementsByClassName("navbar")[0].classList.add("hide");
-	}
-    }
-    var sub = this.getElementsByClassName("navbar")[0];
-    if( sub.classList.contains("hide") ) {
-	sub.classList.remove("hide");
-    } else {
-	sub.classList.add("hide");
-    }
-}
+// function showMenu() {
+    
+//     for( var i=0; i<submenus.length; i++ ) {
+// 	    if( submenus[i].menuNumber != this.menuNumber ) {
+// 	        submenus[i].getElementsByClassName("navbar")[0].classList.add("hide");
+// 	    }
+//     }
+    
+//     var sub = this.getElementsByClassName("navbar")[0];
+    
+//     if( sub.classList.contains("hide") ) {
+// 	    sub.classList.remove("hide");
+//     } else {
+// 	    sub.classList.add("hide");
+//     }
+// }
 
-function hideMenu() {
-    for( var i=0; i<submenus.length; i++ ) {
-	submenus[i].getElementsByClassName("navbar")[0].classList.add("hide");
-    }
-}
+// function hideMenu() {
+//     for( var i=0; i<submenus.length; i++ ) {
+// 	    submenus[i].getElementsByClassName("navbar")[0].classList.add("hide");
+//     }
+// }
 
-for( var i=0; i<submenus.length; i++ ) {
-    submenus[i].menuNumber = i;
-    submenus[i].addEventListener("click", showMenu);
-}
+// for( var i=0; i<submenus.length; i++ ) {
+//     submenus[i].menuNumber = i;
+//     submenus[i].addEventListener("click", showMenu);
+// }
 
-document.getElementById("docbody").addEventListener("click", hideMenu);
+// document.getElementById("docbody").addEventListener("click", hideMenu);
 
 // image display
 
@@ -35,42 +38,60 @@ var view = document.getElementById("showimage");
 var bigimg = document.getElementById("imgbig");
 
 if( view !== null ) {
-    
-    view.addEventListener("click", openView(false,"wait.svg", view, false));
+    view.addEventListener("click", openView(false, "/icons/wait.svg", view, false));
 
-    var thumbs = document.getElementsByClassName("thumb");
-    var screenshots = document.getElementsByClassName("screenshot");
-    var comics = document.getElementsByClassName("comic-thumb");
+    var thumbs = document.getElementsByClassName("art-thumb");
 
     for( var i=0; i<thumbs.length; i++ ) {
-	thumbs[i].addEventListener("click", openView(true, thumbs[i], view, false));
-    }
-    for( var i=0; i<screenshots.length; i++ ) {
-	screenshots[i].addEventListener("click", openView(true, screenshots[i], view, false));
-    }
-    for( var i=0; i<comics.length; i++ ) {
-	comics[i].addEventListener("click", openView(true, comics[i], view, true));
+	    thumbs[i].addEventListener("click", openView(true, thumbs[i], view, false));
     }
 }
 
-function openView(toggle, img, dest, isComic) {
+function openView(toggle, img, dest, is_comic) {
     return function() {
-	console.log(dest);
-	if( toggle ) {
-	    if( isComic ) {
-		bigimg.classList.remove("artimg");
-		bigimg.classList.add("comicimg");
+	    if( toggle ) {
+	        if( is_comic ) {
+		        bigimg.classList.remove("artimg");
+		        bigimg.classList.add("comicimg");
+	        } else {
+		        bigimg.classList.remove("comicimg");
+		        bigimg.classList.add("artimg");
+	        }
+            
+	        bigimg.src = "/icons/wait.svg";
+	        bigimg.src = img.dataset.src;
+	        dest.classList.remove("hide");
+	        dest.scrollTop = 0;
+	        
 	    } else {
-		bigimg.classList.remove("comicimg");
-		bigimg.classList.add("artimg");
+	        dest.classList.add("hide");
 	    }
-	    bigimg.src = img.dataset.src;
-	    dest.classList.remove("hide");
-	    dest.scrollTop = 0;
-	    
-	} else {
-	    dest.classList.add("hide");
-	}
     };
 }
 
+  
+function toggleElement( element_id ){
+  var d = document.getElementById(element_id);
+  if( d.style.display == "none" ) {
+    d.style.display = "block";
+  } else {
+    d.style.display = "none";
+  }
+  return false;
+}
+
+var a='mon';			
+var b='ful';
+var c='l';
+var d='gm';
+var e='ail.com';
+var g='tis';
+var h='@';
+var s='mai';
+var t='lto:';
+
+contact = document.getElementById('contact');
+if( contact !== null ) {
+  contact.href=s+t+b+c+a+g+h+d+e;
+  contact.innerHTML=b+c+a+g+h+d+e;
+}
