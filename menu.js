@@ -84,14 +84,17 @@ var a='mon';
 var b='ful';
 var c='l';
 var d='gm';
+var t='lto:';
 var e='ail.com';
 var g='tis';
 var h='@';
 var s='mai';
-var t='lto:';
 
 contact = document.getElementById('contact');
+contact2 = document.getElementById('contact2');
+link = document.getElementById('link');
 if( contact !== null ) {
-  contact.href=s+t+b+c+a+g+h+d+e;
-  contact.innerHTML=b+c+a+g+h+d+e;
+  contact.href= s+t+b+c+a+g+h+d+e;
+  contact2.innerHTML += b+c+a+g+h+d+e;
+  link.innerHTML="<span class='color'>" +b+c+a+g+ "</span>"+h+d+e;
 }

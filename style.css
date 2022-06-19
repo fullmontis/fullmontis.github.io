@@ -1,19 +1,19 @@
-html { font-family: 'Palatino Linotype','Book Antiqua','DejaVu serif',serif; font-size: 20px; width: 100%; }
+html { font-family: 'PT Serif', 'Palatino Linotype','Book Antiqua','DejaVu serif',serif; font-size: 20px; width: 100%; }
 
 body { width: 100%; margin: 0; margin-bottom: 0; background-color: #2d2346; color: #f8f1ff; line-height: 1.7em;
        background-image: url("icons/background-scroll.jpg"); background-repeat: repeat-y;
        background-attachment: scroll; background-position: right top; background-size: 120vw;}
 
-a { color: #baa2fb; transition: color 0.5s ease-in; text-decoration: none; border-bottom: 1px dotted #baa2fb; }
+a { font-family: Nunito; color: #baa2fb; transition: color 0.5s ease-in; text-decoration: none; border-bottom: 1px dotted #baa2fb; }
 .undecorated { border-bottom: none; }
 a:hover { color: #bc8eff; border-bottom: none; }
 b { color: #bfa8ff; }
 blockquote { background-color: #3f3557; margin: 0; margin-top:1.3em; margin-bottom: 1.3em;  padding: 1em; font-style: italic; color: #d1c6dd; }
 h1,h2,h3 { line-height:1.2em; font-weight: bold; font-size: 1.4rem; margin-top: 1.3rem;
            margin-bottom: 1.3rem; color: #d1aaff;}
-h1 { margin-top: 1rem; font-size: 2rem;}
-h2 { font-size: 1.7rem;  }
-h3 { font-size: 1.05rem; }
+h1 { margin-top: 1rem; font-size: 2rem; font-family: Nunito;}
+h2 { font-size: 1.7rem; font-family: Nunito;  }
+h3 { font-size: 1.05rem; font-family: Nunito; }
  
 ul { width: 90%; padding-left: 2em; }
 li { list-style: none; }
@@ -24,7 +24,7 @@ p { width: 100%; margin-top: 1em; margin-bottom: 1em;}
 #header { font-size: 5vw; background-color: #222; width: 100%; margin: 0;
           vertical-align: middle; overflow: visible; height: 50px; box-shadow: 3px 3px 3px 0 #190e25; text-align: center; }
 #sitetitle:hover { background-color: #996888; }
-#nav { margin: 0 auto;  display: block;  height: 100%; padding: 0; width: 100vw; }
+#nav { margin: 0 auto;  display: block;  height: 100%; padding: 0; width: 100vw; font-family: Nunito;}
 #nav > li { display: inline-block; vertical-align: top; width: 33.3vw; text-align: center; }
 #nav > li:hover { background-color: #996888; }
 #nav > li::before { content: none; }
@@ -32,7 +32,7 @@ p { width: 100%; margin-top: 1em; margin-bottom: 1em;}
                 min-height: 50px; line-height: 50px; cursor: pointer; }
 
 /* footer */
-#footer-list { width: auto;
+#footer-list { font-family: Nunito; width: auto;
 	    max-width: 90vw;
 	    margin-left: auto;
 	    margin-right: auto; text-align: center;}
@@ -77,44 +77,6 @@ pre {
 	     overflow: scroll;}
 .artimg { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; margin: auto;   }
 .hide { display: none !important; }
-
-@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-}
-@media (min-width:340px) {
-    .game-title { font-size: 1.2em !important; }
-    .game-desc { font-size: 0.8em !important; }
-}
-
-@media (min-width:400px)  {
-    #nav > li { width: auto; }
-    #header { font-size: 20px; }
-} 
-@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */
-    body { background-size: 70vw !important; }
-}
-@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-    #header { text-align: right;  }
-
-    .price-slot img { width: 33.3% !important; }
-    .price-slot img:nth-of-type(3) { display: inline-block !important; }
-
-}
-@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
-    body { background-position: right top; background-size: 50vw !important;
-background-repeat: repeat-y; background-attachment: scroll;}
-
-    .content { max-width: 650px; padding: 0;  }
-    #footer-list { width: 650px; }
-    #maincontainer { margin-left: 1vw; margin-right: 1vw;}
-    .part { width: 98vw !important; }
-    #mainmenu { display: none; }
-    #mainmenu + label { display: none !important; }
-    .card { max-width: 300px; }
-    .thumb { width: 100%; }
-}
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) { /* hi-res laptops and desktops */ }
-
 
 #mainmenu {opacity: 0; width: 0; height: 0;}
 
@@ -193,7 +155,7 @@ p.wide{ margin-bottom: 2.5em;}
 .game-block { width: 80vw; height: 64vw; max-width: 320px; max-height: 254px; position: relative; border-radius: 25px; overflow: hidden; margin:10px; display: inline-block; }
 .game-thumb { width: 100%; filter: brightness(40%)}
 .game-description-box { position: absolute; top: 10%; left: 10%; text-align: left; width: 80%; max-width: 260px; }
-.game-title { font-size: 1em; font-weight: bold; color:#baa2fb; font-style:italic; }
+.game-title { font-size: 1em; font-weight: bold; color:#baa2fb; font-family: Nunito; }
 .game-desc { color: #c1b0db; font-size: 0.7em; }
 .game-details { font-size: 0.9em; color:white; line-height: 1.5 em; display:block; }
 
@@ -203,7 +165,7 @@ p.wide{ margin-bottom: 2.5em;}
 .art-thumb { width: 80vw; height: 64vw; max-width: 320px; max-height: 254px; border-radius: 25px; margin:10px; display: inline-block; }
 
 
-.header { font-weight: bold; font-style: italic; color: #bfa8ff;}
+.header { font-weight: bold; font-family: Nunito; color: #bfa8ff;}
 .small { font-size: 0.8em; line-height: 1.3em; list-style-position: outside; }
 .small > li { margin-bottom:1em; list-style-position: outside;}
 
@@ -224,3 +186,69 @@ p.wide{ margin-bottom: 2.5em;}
 
 .toggle-button { background-color: #bfa8ff; color: white;  transition: background-color 0.5s ease-in; text-decoration: none; border: 0; padding: 10px; border-radius: 10px; text-align: center; display: block; margin: 0 auto; }
 .toggle-button:hover { color: white; background-color: #8e4fd2; }
+
+
+.link-small { display: inline;}
+.link-big { display: none !important;}
+
+.link-list { margin: 0 auto; padding:0;  margin: 0; width: 100%;text-align: center;  }
+.link-list > li { display: block; width:100%; }
+.link-list > li::before { content: none; }
+.link-button { width: 25px; vertical-align: middle; display:inline; }
+.link-list > li > a { transition: none; font-weight: bold; border-bottom: none; }
+.link-left { font-size: 0.9em; font-family: 'Nunito'; text-align: left; width: 90%; max-width: 250px; display:inline-block; font-weight: normal; color: white; padding: 0.5em; margin: 0 auto; margin-bottom: 1em; background-color: #8e4fd2; border-radius:10px; }
+.link-right { display:none; }
+
+.commission { background-color: #8e4fd270; border-radius: 25px; display: inline-block; padding: 0.5em; width: 95%;  max-width: 500px; }
+span.color { color: #e2d5ff; }
+
+
+
+@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+}
+@media (min-width:340px) {
+    .game-title { font-size: 1.2em !important; }
+    .game-desc { font-size: 1em !important; }
+}
+
+@media (min-width:400px)  {
+    #nav > li { width: auto; }
+    #header { font-size: 20px; }
+    .link-list { font-size: 1.1em; }
+.link-left { padding-left: 3em;}
+} 
+@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */
+    body { background-size: 70vw !important; }
+}
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    #header { text-align: right;  }
+
+    .price-slot img { width: 33.3% !important; }
+    .price-slot img:nth-of-type(3) { display: inline-block !important; }
+
+    .link-small { display: none;}
+    .link-big { display: inline !important;}
+
+    .link-list { width: 550px; margin: 0 auto; text-align:left; }
+    .link-list > li { width: 100%; display: block; }
+    .link-list > li > a { transition: none; font-weight: bold; border-bottom: none; width: 400px; }
+    .link-left { font-size: 1.1em; text-align: right; display:inline-block; width: 230px; font-weight: normal; color: white; padding-left: 0px; padding-right: 10px;  margin-right: 10px; margin-bottom:0px;  padding-bottom: 0.5em; border-right: 1px solid #634f99; background-color: #00000000; border-radius: 0px; }
+    .link-right { text-align: left; font-family: 'PT Serif'; display: inline-block; font-size: 0.9em; }
+
+}
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+    body { background-position: right top; background-size: 50vw !important;
+background-repeat: repeat-y; background-attachment: scroll;}
+
+    .content { max-width: 650px; padding: 0;  }
+    #footer-list { width: 650px; }
+    #maincontainer { margin-left: 1vw; margin-right: 1vw;}
+    .part { width: 98vw !important; }
+    #mainmenu { display: none; }
+    #mainmenu + label { display: none !important; }
+    .card { max-width: 300px; }
+    .thumb { width: 100%; }
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
