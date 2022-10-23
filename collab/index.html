@@ -1,0 +1,2061 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+<meta http-equiv="content-type" content="text-html; charset=utf-8">
+    <title>Monster Girl Diaries</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no">
+  </head>
+<style>
+
+@font-face { font-family: goudy; src: url(font/goudy_bookletter_1911.otf) format('truetype'); weight: normal; style: normal; }
+@font-face { font-family: isabella; src: url(font/isabella.ttf) format('truetype'); weight: normal; style: normal; }
+body, img, h1,h2,h3, ul, li  { margin: 0; padding: 0;  }
+ul { margin-bottom: 1em;}
+ul.fancy-bullets { padding-left: 1.5em; list-style: none; padding:0 1em; text-align: left;  }
+ul.fancy-bullets li::before { content:""; background-image: url("flower.png"); transform: scaleX(-1);background-repeat:no-repeat; background-size: 1em; width: 1em; height: 0.5em; display: inline-block; margin-right: .5em;}
+.author-link { margin-bottom: 0.5em;}
+.authors { margin-bottom: 2em; }
+body { display: flex; justify-content: center; print-color-adjust:exact; background-image: url("bg.jpg"); -webkit-text-size-adjust: none; min-width: 320px; font-size: 1.2em; line-height: 1.4em; font-family: goudy,arial,serif; }
+h1, h2, h3 { font-family: isabella, helvetica, serif; font-size: 1.5em;  text-align: center; line-height: 1.1em; }
+
+a { text-decoration: none; font-weight: bold; color: #8e5a55; border-bottom: 1px dashed #916464; }
+b {color: #663232;}
+.small-margin { margin-top: 0;}
+.base, .button-close-container { width: 100vw; max-width: 141.4vh; }
+.base { background-image: url("paper-html.jpg"); background-size: 100%; }
+.container { width:100%; margin:0; padding:0; display:flex; flex-wrap: wrap; align-items: stretch;}
+.content {  padding: 0 5%; flex: 1; min-width: 320px; }
+.content-cover {  padding: 0; flex: 1; }
+.cover { width:100%; min-width: 320px; box-shadow: 0px 10px 10px #5b4a4a; }
+.monster-description {}
+.story {}
+.button { margin: 2%; width: 96%; height: 2.5em; text-align: center;  background-color: #895828; color: #E2D075; border-radius: 5px; cursor: pointer; display: flex; justify-content: center; align-items: center; } 
+#button-close, .button-reposition { width: 90%; margin-left: 5%; margin-right:5%; }
+.button-close-container { position: fixed; bottom: 0; z-index: 10000; display: flex; justify-content: center; }
+
+.button-reposition { display: none; }
+.hidden { display: none !important; }
+
+.font-edit { font-family: goudy; font-size:0.8em;  }
+.index-button { height: 3em; margin: 0.1em 0.3em; padding: 0.1em; }
+.index-title { text-align: center; }
+#index { list-style: none; text-align: center; line-height: 1em; padding: 0; display:flex; justify-content: center; flex-wrap: wrap;}
+#index li { flex:1; min-width:200px;}
+#index li a { text-decoration: none; color: #E2D075; width:100%; height: 100%; display: flex; justify-content: center; align-items: center;  }
+.index-author { font-size: 0.7em; }
+.index-name { font-size: 1.3em; font-weight: bold; } 
+.index-container { display: flex; flex-direction: column; }
+.title { display: inline-block; max-width: 60%; width:fit-content;}
+.title-container { margin-top:1.5em; margin-bottom:1em;text-align: center; font-size: 2em; text-align: center; display: flex; justify-content: center; align-items: center;  }
+.title-container:before, .title-container:after { background-image: url("flower.png"); display:inline-block; content:"";  width: 1.5em; height: 0.75em; background-size: 1.5em; background-repeat: no-repeat; margin-right:0.2em; }
+.title-container:after { transform: scaleX(-1); margin-left: 0.2em;  }
+.monster-image { page-break-after: always; width:100%; }
+.desc {/* color: #776f66;*/}
+
+
+hr { border: 0; background-image: url("separator.png"); background-size: contain; background-repeat: no-repeat; background-position: center;  height: 50px; page-break-after: always; margin-bottom: 2.5em; margin-top:2.5em; } 
+
+@media print {
+    @page { size: A4; margin: 0; }
+}
+
+@media (min-width: 480px) {
+}
+
+@media (min-width: 768px) {
+    .content{ flex:1 0 auto;  width:45%; padding: 2.5%;  }
+    .content-cover { flex: 1 0 auto; width:50%;} 
+    .monster-image {position:sticky; top: 1em; margin-top:3em; }
+    .base { background-size:50%; }
+    .authors {text-align: right;}
+    .title-container { margin-top: 3em; }
+    #button-close, .button-reposition{ width: 42%; margin-left: 4%; margin-right: 4%; }
+    .button-reposition { display: block; height:1em; }
+    .button-close-container { }
+    .small-margin { margin-top: 0.5em; }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1200px) {
+    body{ font-size: 1.5vw; }
+}
+
+</style>
+<body>
+<div class="base">
+<div class="button-close-container"><div class="button-reposition"> </div><div id="button-close" class="button">Close</div></div>
+<div class="container">
+<div class="content-cover"><img src="front-cover.jpg" class="cover"/></div>
+<div class="content"> 
+<div class="title-container small-margin"><h3 class="title index-title">Table of Contents</h3></div>
+
+<ul id='index'><li class='button index-button'><a href='#arachne'><div class='index-container'><span >Arachne - Lilly</span><span class='index-author'>by fullmontis</span></div></a></li><li class='button index-button'><a href='#cyclop'><div class='index-container'><span >Cyclop - The Sisters</span><span class='index-author'>by Karnoss</span></div></a></li><li class='button index-button'><a href='#dragon'><div class='index-container'><span >Dragon - Dozu</span><span class='index-author'>by Nickzilla2000</span></div></a></li><li class='button index-button'><a href='#dullahan'><div class='index-container'><span >Dullahan - Fiona</span><span class='index-author'>by Scarlet</span></div></a></li><li class='button index-button'><a href='#elemental'><div class='index-container'><span >Elemental - Alitria</span><span class='index-author'>by RHappyFace</span></div></a></li><li class='button index-button'><a href='#fairy'><div class='index-container'><span >Fairy - Alette</span><span class='index-author'>by Nacon</span></div></a></li><li class='button index-button'><a href='#goblin'><div class='index-container'><span >Goblin - Egruda</span><span class='index-author'>by Movail</span></div></a></li><li class='button index-button'><a href='#harpy'><div class='index-container'><span >Harpy - Enderi<span class='font-edit'>k</span>a</span><span class='index-author'>by Elsen</span></div></a></li><li class='button index-button'><a href='#harpyquinn'><div class='index-container'><span >Harpyquinn - Avelyn</span><span class='index-author'>by Sector</span></div></a></li><li class='button index-button'><a href='#hydra'><div class='index-container'><span >Hydra - Triad</span><span class='index-author'>by reer</span></div></a></li><li class='button index-button'><a href='#imp'><div class='index-container'><span >Imp - Pun<span class='font-edit'>k</span>y</span><span class='index-author'>by Zombiate</span></div></a></li><li class='button index-button'><a href='#kitsune'><div class='index-container'><span >Kitsune - Hono<span class='font-edit'>k</span>a</span><span class='index-author'>by Zedrin</span></div></a></li><li class='button index-button'><a href='#kobold'><div class='index-container'><span >Kobold - The Tribe</span><span class='index-author'>by Owl</span></div></a></li><li class='button index-button'><a href='#lamia'><div class='index-container'><span >Lamia - The Witch Doctor</span><span class='index-author'>by paperskinned</span></div></a></li><li class='button index-button'><a href='#mermaid'><div class='index-container'><span >Mermaid - Serene</span><span class='index-author'>by DaniDaniel</span></div></a></li><li class='button index-button'><a href='#mimic'><div class='index-container'><span >Mimic - Tresha</span><span class='index-author'>by MisterSouji</span></div></a></li><li class='button index-button'><a href='#oni'><div class='index-container'><span >Oni - Nali</span><span class='index-author'>by TushiTrash</span></div></a></li><li class='button index-button'><a href='#slime'><div class='index-container'><span >Slime - Cobalt, Sapphire &#xFF06; Azure</span><span class='index-author'>by pandaz90</span></div></a></li><li class='button index-button'><a href='#sphinx'><div class='index-container'><span >Sphinx - Etoh</span><span class='index-author'>by Sable</span></div></a></li><li class='button index-button'><a href='#succubus'><div class='index-container'><span >Succubus - Scarlet</span><span class='index-author'>by LethalBliss</span></div></a></li><li class='button index-button'><a href='#werewolf'><div class='index-container'><span >Werewolf - Taya</span><span class='index-author'>by Crimellgrim</span></div></a></li><li class='button index-button'><a href='#zombie'><div class='index-container'><span >Zombie - Cordelia</span><span class='index-author'>by TheBigDuurnt</span></div></a></li></ul>
+
+<hr>
+</div>
+<div class="content" id="#intro"><img src="adventurer.png" class="monster-image"></img></div>
+<div class="content" >
+<div class="title-container"><h3 class="title">To The Reader</h3></div>
+<p>
+My name is Lucas Ludmon. If you're reading these notes, you've
+stumbled upon years of my own research in a field in which I like to
+consider myself a pioneer in.
+
+</p><p>Monsters. Of the female variant, to be precise.
+
+</p><p>My interest had been cultivated after years as the son of a tavern
+owner. I grew up moving empty mugs away from battered travelers,
+and among raunchy songs and the occasional rant about bandits I
+kept hearing their drunk stories about the magical creatures inhabiting the
+lands outside. 
+
+</p><p>As someone who had never seen an inch of land outside of my
+hometown, these stories felt magical and inspiring. And confusing:
+most of the stories would talk about the dangers and cruelty of these
+monster; but more than a few would recall, with nostalgic eyes, what
+to them were the most beautiful female creatures they had laid their eyes upon,
+and the best pleasures of their tired lives. 
+
+</p><p>The curiosity was killing me: as I grew up into a man, I had long
+decided that my life would be in the outer world, being able to see
+with my own eyes these fantastic creatures, and document my adventures
+with them. I woke up one day, walked out of my hometown: have been
+traveling on an adventure since then.
+
+</p><p>I have scorched my skin under the burning sun of the desert. I have
+lost myself in the most intricate woods. I climbed over the most
+arduous mountains. And all of this just to be able to spend some time
+-- intimate, if the Gods were generous that day -- with an inhuman
+female creature, and learning their customs and their ways of give and
+receive pleasure. 
+
+</p><p>This book is a recalling of the monster girls I had lucky enough to met during my travels. And
+I'm sharing it with you, my dear reader, in the hopes that it will
+inspire you. 
+</p>
+<hr>
+</div>
+<div class='content'>
+<img src='art/arachne.png' class='monster-image' id='arachne'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Lilly</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Arachne</b></li><li>Habitat: <b>Caves</b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>fullmontis</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/fullmontisart' target='_blank'>Twitter</a></li><li><a class='author-link' href='https://instagram.com/fullmontis' target='_blank'>Instagram</a></li><li><a class='author-link' href='https://fullmontis.com' target='_blank'>Website</a></li></ul></li><li>Story by <b>fullmontis</b></li></ul>
+<div class='button monster-button' data-monster='arachne'>Open Diary Entry</div>
+
+<div class='story' data-monster='arachne'><p>
+I met her a couple of weeks ago. Battered by hours of walking without
+trial and without rest, I got caught in a severe storm, rain pouring
+down on my tired body. I found refuge in a nearby cave, facing the
+forest. To my dismay, I found that I had lost most of my dry food in
+the scramble to find some repair; my belly didn't like that
+discovery. Cold and hungry, I lied on the hard rocks until the rain
+brought me to sleep.
+
+</p><p>Usually, safety checks of a new place is second nature to me, but on
+that day exhaustion had taken over me. And as soon as I woke up, the
+thick web that suddenly appeared over my body made me realize that it
+had been a dangerous oversight.
+
+</p><p>It was a thick, elastic and surprisingly warm spiderweb.  While it
+didn't trap me entirely, it limited my movements enough that it spiked
+my anxiety... Which only got worse as my eye caught something nimble
+moving in the darkness of the cave. My body was paralyzed in place,
+unable to move, affected by who knows what poison.
+
+</p><p>I thought my arrogant desire to explore the world had finally caught
+up with me and I was about to become food for some creature higher in
+the chain. When the monster revealed itself to be half spider, half
+woman, I also knew that my death would probably not be quick either,
+as they are usually known to keep their prisoners alive for a very
+long time.
+
+</p><p>The creature approached me, slowly. At first I thought it was going
+slow to enjoy my fear; but as she got closer, I started noticing, with
+confusion, that she was as scared of me as I was of her.
+
+</p><p>My confusion only increased when her quick, darting eyes and blushing
+face revealed her embarrassment. She never spoke, but she let out some
+concerned moans. She slowly approached me, six long spider legs and
+two almost human ones, and noticing I was awake, she jumped back in
+surprise.
+
+</p><p>Then, confusion turned into shock, when she reached over carefully,
+and adjusted the web over me, like a mother adjusting the blanket to
+her sleeping child, just to quickly pull back and watch me from the
+darkness.
+
+</p><p>It was only at this point that I realized I wasn't actually paralyzed,
+nor was I trapped: the web, in fact, was one of the more comfortable
+blankets I had ever used in my life. I guess the shock had played
+tricks on my mind. I slowly pulled the web blanket back, and sat up.
+
+</p><p>Surprisingly late by my standards, I noticed that her human body had
+feminine and rather sensual features. I guess the stress had taken the
+better of my, well, research instincts.
+
+</p><p>As I relaxed, she did too. She approached me again, this time staying
+by my side and looking over me with a concerned look. Her breasts
+jiggled and her hips wiggled with each step, not to lure me in, but
+more as a side effect of her rather curious leg structure. She dropped
+something next to me: it looked like some kind of desiccated meat, of
+dubious origin, probably something she manufactured from the critters
+that run through the cave. It didn't look appetizing, but my hunger
+bit hard enough that I took the chance: and, to my surprise, it was
+incredibly flavorful and pleasant. All the offerings she brought me I
+had chewed away a few minutes later.
+
+</p><p>The arachne watched me silently as I ate. Her smile revealed to me the
+way she actually saw me: not as a meal, but as tired guests that
+needed some hospitality. And hospitality did I get: I didn't know that
+was just the start of what she wanted to do to make me more
+comfortable.
+
+</p><p>She got much closer to me, kneeling to reach my eye level. I could see
+the pedipalps on the top of her head starting to move: I think she was
+smelling my human scent. She seemed to like it somehow, as her blush
+deepened on her face.
+
+</p><p>I don't think I need to detail what happened later: let's just say
+that we enjoyed each other's intimate company for the time that
+followed.
+
+</p><p>Rested and satisfied, I left the cave, the sunlight hitting my face
+giving me new strength for the journey ahead. I had packed more dried
+meat that the arachne had generously offered me. I remember looking
+back in the cave: the arachne was there, in the penumbra. She stood
+there for a while. I heard a sigh, then she waved her hand: a sad
+farewell before disappearing in the darkness.
+
+</p><p>What a strange encounter: usually, lonely creatures seem to appreciate
+their independence. She, for once, seemed to crave someone else's
+presence, and she seemed eager to help me enjoy her presence; probably
+because I was the first  in a very long time, at least judging from
+the passion she put in our time together.
+</p> </div></div><hr></div><div class='content'>
+<img src='art/cyclop.png' class='monster-image' id='cyclop'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">The Sisters</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Cyclop</b></li><li>Habitat: <b></b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>Karnoss</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/karnoss05' target='_blank'>Twitter</a></li></ul></li><li>Story by <b>BountyHunterOfLewd</b></li></ul>
+<div class='button monster-button' data-monster='cyclop'>Open Diary Entry</div>
+
+<div class='story' data-monster='cyclop'><p>
+I was lucky to find a trio of monster girls, so to find another trio
+so soon?! SCORE! I was deep in the forests looking for more monsters
+to study. Little did I know these cute beings were studying me... if not
+hunting for me. I wasn’t sure where they were, as they seemed to be
+quite fast thanks to their small size. But then as I looked up, one of
+them slapped onto my face! It would have been less scary to handle, if
+not for the fact that she had a large jaw where her eye should be!
+Apparently these three ladies are a subspecies of Cyclops that I
+personally like to refer to as the “Jaw-clops.”
+
+</p><p>The one that started attacking me has Red hair and is a real
+powerhouse. However, she is not the brightest seeing as she could have
+found a better way of attacking. Then one with Blue hair popped out
+and shouted in the air, giving some sort of direction, it seems she’s
+the brains of the trio. And finally the Green haired sister who was
+extremely agile and quick as she tied my legs in rope to make me trip,
+though it seemed she trusted Red to hold me off.
+
+</p><p>I did my best to hold off Red’s attacks, but when I used an object to
+block her bites, her teeth would cut through like knives through
+butter! This seemed like the end for me! But then Blue called Red off,
+causing some annoyance. Blue then sniffed me as if to get a good sense
+of me. She then blinked to revert to her eye and blushed. She got
+Green and Red to huddle and seemed to start discussing. Seems they
+can’t talk and look at the same time. I tried to escape but Red yelled
+at me to stay. Seems they still have an amazing smell to make up for
+lack of sight when in jaw mode.
+
+</p><p>Red seemed annoyed that they aren’t eating me yet, with Green
+agreeing, though at least listening to what her smart sister has to
+say. I couldn’t really make out what they were saying as I was too
+focused on not getting eaten at the moment, but it sounded like I
+could be useful for something. Green sniffed towards me and seemed to
+agree, though Red seemed to be annoyed about it but then begrudgingly
+agreed. So the trio had Red begin to drag me back to their hut.
+
+</p><p>Once we were at their makeshift home, Blue explained to me how they
+got nervous with a human lurking about, plus they were a bit
+hungry. I’ll admit, I got really freaked out with the idea of being
+ripped apart by these cute jaw-clops, but talking to them sort of
+helped calm the air a bit. Green offered me what I assume was a cooked
+squirrel, which I figured I shouldn’t take as they seem to be able to
+eat anything. Red felt rather offended and likely wanted to bite my
+head clean off, but then she smelled something off me. I raised my
+brow in curiosity, to which she leaped onto me and found my rations
+given by the arachnid I met not too long ago. I offered it to her, to
+which she was delighted, seeing how she went from excitement in her
+eye, to her jaws forming and tearing into it. Blue and Green seemed
+surprised, but happy that Red seemed to relax a bit.
+
+</p><p>They explained to me how they usually live in groups of three, for
+safety in numbers and so there wouldn't be any risks of each other
+being devoured. Explains the whole caution aspect of my presence. But
+Blue tried to comfort me saying how I was clearly not a bad person,
+nor intending to harm them, which is true. We then sat around and
+talked about my reasons for being out here and all enjoyed the nice
+evening together
+
+</p><p>The three seem to depend on each other's skills, and make up for their
+weaknesses. A true bond between three sisters that seem unbreakable. I
+mean it’s amazing what they share together! They share the same food,
+home, room... and even mates.
+
+</p><p>Yes, surprisingly after giving Red my food, she looked at me with
+some... intimate intentions. Green couldn’t help but do the same. Then
+Blue explained how as they share common necessities, they share their
+husbands as well. I got a bit nervous and tried to clarify what they
+meant since we weren’t even together, but before I could even go deep
+into the craziness of the situation, Blue pulled me in for a kiss. It
+felt weird as I couldn’t tell if I was kissing her lips or her eyelids
+at this point... maybe both? Green and Red had shocked reactions and
+immediately charged in, Green quickly stealing me for a kiss, then Red
+doing so with extreme aggression as if trying to show dominance!
+Before I could even react or think, the trio pulled me onto the ground
+and... well.
+
+</p><p>The next morning, I’d find myself covered in lots of bites. Luckily
+they were love bites... But even then I’d say to take extreme caution as
+they still hurt like hell! As I began to prepare to continue my
+journey, the girls looked at me with very sad expressions. I was
+honest and told them that I had to go to complete my journey. They
+seemed saddened but understood... except for Red who just seemed way
+more upset and angry, but Blue would explain it. They gave me one more
+hug, which I of course returned, and continued on my journey, waving
+farewell to the Jaw-clops sisters, to which they yelled about how they
+would care for the babies... The hell does that mean?!</p> </div></div><hr></div><div class='content'>
+<img src='art/dragon.png' class='monster-image' id='dragon'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Dozu</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Dragon</b></li><li>Habitat: <b>Great Plains/Woodland</b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>Nickzilla2000</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/NickzillaKOTM' target='_blank'>Twitter</a></li></ul></li><li>Story by <b>fullmontis</b></li></ul>
+<div class='button monster-button' data-monster='dragon'>Open Diary Entry</div>
+
+<div class='story' data-monster='dragon'><p>
+I consider myself an exception: most of the girls I listed in here are
+outcasts, creatures that only rarely interact with the human species
+(let alone mate with them!) and that are often rejected by human
+settlements. But there was a case in which a monster girl had a
+uniquely wholesome relationship with human beings. 
+
+</p><p>After I reached the Great Plains, I found some rest in Gondo, a small
+but rather well off village in the middle of prosperous pastures. I
+was rather surprised to see a place like this in these lands, as it
+wasn't rare to have monsters or bandits pillage and attack
+villages. The local tavern owner, an old and sympathetic lady was more
+than happy to answer my questions. And, as it often happens, the
+answers I got also helped me in my quest for bodacious monsters girls. 
+
+</p><p>"It's thanks to Dozu," said the lady. Apparently, that is a dragon
+that has found home in these plains, and that has become friends with
+the locals, . "You should be able to meet her later today," she
+mentions. "She usually comes around before sunset to grab some
+meatpie."
+
+</p><p>When sunset came, so did the dragon. Seeing her approach from afar was
+a humbling and beautiful vision: her multicolored wings expanded in a
+rather impressive wingspan. I stood at the entrance of the city with a
+dozen other locals. Dozu landed in front of us, raising a large cloud
+of dust. Then her wings closed, and a pretty, and surprisingly tall
+and feminine dragon, with large hips swaying on her sides, appeared in
+front of us.
+
+</p><p>As menacious her size seemed, her attitude from the first moment
+was pleasant, bordering on the adorable. The villagers approached her
+like a horde of happy children, grabbing her legs and offering her
+meatpie. She grabbed a handful in a heartfelt hug, lifting them off
+the floor. She got offered meatpie, and her eyes sparkled with glee.
+I saw her much on whole meatpies, one per hand, as the villagers were
+looking at her in awe.
+
+</p><p>She was halfway into the second one, when she finally noticed me. She
+blushed up immediately, dropped the food and approached me. "Oh my
+God, I'm so sorry," she said, in a voice that was rather high pitched,
+considered my face barely reached her bellybutton. "My name is Dozu."
+We talked for a little while, getting to know each other. 
+
+</p><p>As I mentioned my "research", she seemed immediately interested. "I
+didn't know there were men that did such a work!" She told me that she
+had to leave, but that she wanted to continue our conversation. "Do
+you want to come to my lair? I wouldn't mind a little company. Nights
+can get very lonely." My research spirit pushed me to accept. 
+
+</p><p>Of course it would be faster for me to fly with her. She said goodbye
+to the locals and grabbed a basket filled with more meatpies, then she
+kneeled, allowing me to sit on her back above her wings. Then she
+stood up and opened up her wings, flapping them against the
+ground. Soon enough, we were off, and we gained air, as I was holding
+against her for my dear life. "Please don't move around a lot," she
+mentioned. "Thanks to all these meatpies I end up having trouble
+balancing myself." 
+
+</p><p>The flight had been one of the most incredible moments in my long
+adventures: being able to see the land from above, glancing from the
+distance at all the lands that I had just gone through, was a feeling
+I was barely able to contain. We landed not far from where we took
+off, a more reserved spot near the woods where a small valley formed
+the perfect place for a dragon like her to take some rest.
+
+</p><p>"I am sorry about my place," she said as we landed, going around and
+grabbing random stuff from the floor with an embarrassed look on her
+face. "I am not used to having guests here." From there, she let me
+sit on a corner of her place, as she laid on her side on the ground. 
+
+</p><p>We talked for a while of different things. Her presence was one of the
+most attractive I had found in a long time. She mentioned how she
+started protecting the village a few generations earlier. "The locals
+were really nice to me, and their meatpies had always been special."
+She glances over to the basket she brought home, licking her lips. "I
+would do anything to protect those people. Whenever a handful of
+bandits wander in this area to pillage, I am quick to remind them
+about my presence." She snorted her nostrils, a scary line of fire
+coming out of them.
+
+</p><p>Then her eyes mellowed out a little and a smile appeared on her lips,
+and her hand started rubbing against her monumental hips. "So, please
+tell me more about this research you are conducting."
+
+</p><p>Let's just say that from that moment on, our company has been
+pleasant in more than one way! I ended up spending the night at her
+lair. I just want to mention that, when being in the middle of this
+kind of stuff, it is always proper to remember to not get crushed
+under the beautiful weight of such a creature!
+
+</p><p>I am still in this village a week later, as I'm preparing to leave. It
+was a good time to restore my strenght a little. And let's just say
+that Dozu was more than eager to spend quality time for me. She teared
+up already, knowing that I would be leaving soon. This is
+probably the hardest time to say goodbye to a friend. 
+
+</p><p>But the journey of an adventurer never ends... And that is both the
+positive and the negative of the lifestyle that I chose. 
+
+</p><p></p> </div></div><hr></div><div class='content'>
+<img src='art/dullahan.png' class='monster-image' id='dullahan'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Fiona</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Dullahan</b></li><li>Habitat: <b></b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>Scarlet</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/SinfulSmart' target='_blank'>Twitter</a></li></ul></li><li>Story by <b>BountyHunterOfLewd</b></li></ul>
+<div class='button monster-button' data-monster='dullahan'>Open Diary Entry</div>
+
+<div class='story' data-monster='dullahan'><p>
+Death isn’t an easy thing. No matter who you are, death will come for
+us all eventually. I was proven this after seeing a creature of death
+as the sun began to set. A woman riding a black horse, flames spewing
+from her neck... and holding her own severed head in her hand. That’s
+right, I’m of course speaking of the legendary Dullahan.
+
+</p><p>I saw this fearsome warrior riding down the path with her ferocious
+looking steed, and legend has it, they only come to those who are
+about to die... that or festivals and feasts, but there weren’t either
+of those around out here.  And I was the only person on this road...
+SHIT!!!! I had to start running for dear life, which she definitely
+noticed as she and her mighty horse began to charge at me! As the sun
+set, it got darker and darker, making it much harder to see out in the
+open areas. But I did my best to keep my distance from this formidable
+reaper.
+
+</p><p>But before I could even react, I felt a strange object wrap around my
+leg. It was a whip... MADE OF BONES! A whole human spine to be exact!
+Maybe a few spines cause honestly the fact that it managed to stretch
+far enough to catch me is rather weird. But I digress, I was certainly
+caught and tripped to the ground! I tried to unwrap the whip to no
+avail! She lept off her horse and stepped closer and closer to
+me. Then I remembered! Dullahans are weak to gold! Luckily I still had
+some relics from the slime’s den! So I whipped out a small golden
+object and shouted at the dullahan to stay back! The response was... not
+what I expected. She basically asked what I had in my hand and if it
+was supposed to do anything. So either the rumors of gold warding
+dullahans off are fake, or I got royally jipped!
+
+</p><p>As she caught up to me, and while it was a very pleasant angle to see
+before my demise, I bravely pulled the opossum technique of playing
+dead. After some time, things seemed fine. Seemed to still be
+breathing. And then I woke up to find myself in a wagon lined with...
+FUNERAL ITEMS?! I was in the dullahan’s wagon! I tried to sneak out,
+but then I saw her caring for her horse, to which she saw me too. She
+seemed relieved that I was alright. I was about to run, but she
+stopped me. And to my surprise, she bowed and apologized to me for the
+major understanding, much to my surprise. She introduced herself as
+Fiona, the dullahan of this area, and even her horse whose name is
+Kieran.
+
+</p><p>After regaining my senses, Fiona explained to me that she wasn’t
+actually after my soul, but just happened to see that I was getting
+tired from all the walking. When I asked why she attacked me, she
+blushed and explained that she used her whip to stop me because
+otherwise I would have tripped over a cliff. Needless to say, I felt
+embarrassed that I jumped to conclusions. We ended up laughing about
+it afterwards and she was kind enough to take me to the nearby village
+that she was heading to. I of course accepted, since it was late
+already.
+
+</p><p>When we got to the village, some people ran off scared. Understandable
+seeing as the headless guardian of death was just outside. I could
+tell that she was uncomfortable, but she tried to brush it off saying
+this was a common occurrence... Again I couldn’t see how. When I looked
+into the village, I realized there was a festival of feasts going on!
+What’s the likelihood of that happening?! I asked her who was going to
+die, but before she could tell me, several guards came with weapons
+pointed at us! Or more specifically, at Fiona. She looked like she
+didn’t want to fight, but got ready anyway as she swung to reflect
+spears, her flames growing brighter! She eventually got hit by an
+arrow, causing her to drop her head! I’m not certain on how her hot
+muscular body works, but I’m certain that if her head is destroyed,
+it’s all over! As a soldier was about to stab her defenseless head, I
+stepped in before it was too late. It was suddenly dark and silent. 
+
+</p><p>I then woke up to see the headless body, arms folded by my bedside. I
+then found the head of Fiona resting beside me. I was a bit surprised...
+I wonder if she tried to warm me up- ah what was I thinking, she’s not
+that kind of woman! I think. But she awoke soon after I did, causing
+her body to jolt up and hug me. It was rather surprising. She told me
+how she didn’t come to reap any souls and that she just wanted to
+enjoy the festival, since she doesn’t get to socialize much. The
+villagers must have believed her if I was crazy enough to take the
+blow for her.
+
+</p><p>One of the perks of having your head separate from your body is that
+the body can gather food while the head can stay and talk to you. We
+ended up talking for hours, maybe even the whole night. Her body
+finally came back with food for me. I was a bit confused, then
+realized... can swallow food without the head?! Must be able to. She
+then told me how it seems unnecessary since her head is detached, but
+she always wanted to try some things. I offered her her first taste of
+some of my food, which she tried to dismiss. I told her that no was
+not an option, teasingly of course, I don't want to die for real. She
+of course did, and she lit up with joy! Of course I held her head over
+her flaming neck so it would actually be digested.
+
+</p><p>I then looked into Fiona’s eyes... her looking into mine. And I think we
+were thinking the same thing... cause as I was about to kiss her, her
+body crashed right into me with clothes flying off! I again don’t need
+to go into too much detail here, buuuut I can say that there are
+intimate perks with the headless feature. The next morning, she was
+gone. Seems her normal hours in the living were up for now. I was left
+with a parchment by my pillow though saying, “I’ll be back for you
+soon.” On one hand, that sounds extremely terrifying! On the other,
+very arousing! Makes you wish that does come to pass.
+
+</p><p></p> </div></div><hr></div><div class='content'>
+<img src='art/elemental.png' class='monster-image' id='elemental'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Alitria</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Elemental</b></li><li>Habitat: <b>Elemental Plane</b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>RHappyFace</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/RHappyFace2' target='_blank'>Twitter</a></li></ul></li><li>Story by <b>fullmontis</b></li></ul>
+<div class='button monster-button' data-monster='elemental'>Open Diary Entry</div>
+
+<div class='story' data-monster='elemental'><p>
+In one of my rare stays in a tavern, I exchanged pints with an old man that
+looked a lot wiser than he sounded. His name I forgot, something I
+wish I could say for his alcoholic breath. The heavy grimoire he had
+tied to his black robe like a backpack gave it away that he was a
+magician, and the way he was downing mug after mug told me that he
+was far off the austere path. As it usually happens, we ended up
+talking about women, and I told him about my exploration of the female
+world.
+
+</p><p>A grin appeared on his face that hinted at the start of a new
+adventure. "Have you ever copulated with a being from another plane?"
+I told him no, my desire for -- ahem -- "knowledge" piqued. I didn't even
+know it was possible; but he was quick to explain that through some ritual --
+"which only me and a handful of other mages are able to perform", he
+specified with pride --, it is possible to manifest elemental forces in a
+feminine body. "But it can't be perfomed alone", he specified, "as at
+least two people are needed for the ritual". Then he asked me, with a
+gleam in his eye: "Want to help me with it?"
+
+</p><p>The next morning, while the sun was still down, me and the old mage
+stopped in a clearing in the nearby woods, far enough from the village
+to not be disturbed during the ritual -- or, as I found out later, to
+avoid provoking more damage then necessary. I watched as he
+meticulously cleared the ground from debris, then he pulled out salt
+and his grimoire, and started drawing weird symbols on the ground,
+while chanting even less intelligible sounds from his black
+book. Unsure as to what to do, I stood by his side, until he quickly
+gestured me to approach him and chant after him, while standing on the
+edge of a circle of symbols on the ground.
+
+</p><p>For each new word we pronounced, the sky above us started clouding up
+and storming. I wanted to stop right away, an uneasy feeling growing in my
+stomach; but the chanting continued, until a lighting struck perfectly
+in the middle of the circle, just inches away from my shocked but
+unarmed face. 
+
+</p><p>As my blinded vision started coming back, I could see someone floating
+just above our heads. It had the shape of a woman, but the energy that
+emanated from her was thick like that inside of a story cloud. I
+passingly approved of her perky nipples as she turned to look at the
+old man, a mere consolation as the realization that I was soon
+to die dropped on me like an ice cold bucket.  
+
+</p><p>"You again!" The thundering voice that came out of her was veiled by
+disappointment, as was her face. "You annoying little pest. Why would
+you dare to disturb me, old man?" She crossed her arms, as if
+expecting an explanation. The old man continued chanting from his
+grimoire, as if trying to control the creature, but his voice quickly
+waned into silence as with a nod of her head the circle of salt on the
+ground exploded in a cloud.
+
+</p><p>"How dare you try and control me, sorcerer?" Her voice was full of
+anger. "I am Alitria. I am the daughter of Thunder, Earth and Fire. I
+shall not accept this insult any longer."
+
+</p><p>He stared at me: his fearful eyes said everything I needed to know
+about the situation. His mouth spelled a four letter word, just a
+moment before his body crumpled on the ground like a piece of
+paper, along with a circle of grass around him, sinking in the ground
+one foot deep. I stared at his body sank in the earth, before looking up
+and having my blood chilled to the bone as my eyes met the elemental.
+
+</p><p>"Who are you?" She demanded. "You are not a mage. Why did you ask for
+my presence?" I tried answering, but no sound would come out. 
+
+</p><p>She sighed. "I shall not waste my time in this low realm without
+anything in return. You!" She pointed her finger at me. "Undress." 
+
+</p><p>In less than a breath my clothes were on the ground. I closed my eyes,
+promising myself I wouldn't mess with elementals again if I would ever
+come out alive from this. When I opened them again, the scorn gave way
+to surprise, and then a smile, on her face.
+
+</p><p>"I underestimated you, mortal. Your body pleases my feminine nature."
+She approached me, pressing her volluptous body against mine. My fear
+quickly turned into pleasure as her touch became more intimate. "Maybe
+my time on this Earth isn't wasted, after all". 
+
+</p><p>When we were done, she looked satisfied, just as much as I was
+spent. Let's just say that I discovered that elementals demand just as
+much energy as they possess. Then, paying me a kiss and a smile, she
+just dissolved in the aether, leaving me on the grass, naked and with
+still the breath in my lungs. Still shaking, I dressed up, and helped
+the old man out of the ground he had been buried in. He coughed up
+some grass, and smiled at me.
+
+</p><p>"Worth it, ain't it?"
+
+</p><p></p> </div></div><hr></div><div class='content'>
+<img src='art/fairy.png' class='monster-image' id='fairy'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Alette</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Fairy</b></li><li>Habitat: <b>Forest</b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>Nacon</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/pale_nachan' target='_blank'>Twitter</a></li><li><a class='author-link' href='https://nacon.carrd.co/' target='_blank'>More Links</a></li></ul></li><li>Story by <b>fullmontis</b></li></ul>
+<div class='button monster-button' data-monster='fairy'>Open Diary Entry</div>
+
+<div class='story' data-monster='fairy'><p>
+Alette was unique among most of my encounters. And not only because of
+her size, since she's definitely the smallest among all the monsters I
+met, just large enough to fit snuggly in a flower in full bloom as if
+it was a comfortable throne.
+
+</p><p>Since I have to hunt for most of my food, it is almost second nature
+for me to set traps to catch wild rabbits or squirrels. The little
+meat they provide is a lot of sustainance that I crave on my longer
+journeys. 
+
+</p><p>One day, I reached the side of a sunlit hill in the middle
+of the forest. Perfect place for catching some rabbits. I was working
+to setup my traps near some promising holes in the ground, when
+something brushed lightly against my eyes, flurrying its wings before
+flying away.
+
+</p><p>I shook my head, surprised, as I thought of some insect that lost its
+way. I was about to continue, when the thing brushes against my face a
+second time. I let out a surprised lament, as for the third time it
+blinded me. Only as I fell with my butt on the grass, I realized what
+was that was hitting my face. 
+
+</p><p>"Stop it!" A fairy, with a thin but surprisingly sharp voice, was
+dancing in front of my eyes. She was pouting, and on her tiny face I
+could see strong disappointed. "No traps on this hill. No traps!"
+
+</p><p>I tried explaining her that I needed to find something to eat. "No
+meat!" She moaned again. "Don't touch my friends!"
+
+</p><p>I sighed. As much as I could fling her away with my fingers, I didn't
+want to be mean to her. I resigned myself to finding some tasteless roots for
+sustainance: but then, she hit me again in the eyes, to grab my
+attention.
+
+</p><p>"Follow me!" Then, without waiting for me, she started flying away,
+towards the nearby forest. I knew better about following creatures,
+especially ones I just met, but there was something about her presence
+that made me trust her. I followed her magic dust trail shining in the
+sunlight as we moved among the trees. We didn't walk a minute when she
+stopped, and pointed at a nearby bush. 
+
+</p><p>"There!" She said. "Grab one for me please. You can have as many as you
+want." 
+
+</p><p>I looked at the plant she was excitingly flying around, a little
+disappointed: it looked like any other inedible bush I trip upon my
+journey. 
+
+</p><p>"One of what? There is nothing there."
+
+</p><p>"Look closer!" She grabbed my finger and brought it in the middle of
+the bush. Surprised, just behind the tangle of green, I felt something
+plump and firm under my fingers. I pulled, and I saw a small black
+berry in my hand, of a kind I had never seen before. With a sigh of
+reluctance, I dropped it in my mouth.
+
+</p><p>Flavor like I had never tasted before detonated in my mouth. I
+moaned out of surprise, as the juices 
+
+</p><p>"More, more! There's more inside. And one for Alette, please!" 
+
+</p><p>I continued pulling out berries from the inside of that weird bush,
+stuffing my face with them. Alette grabbed one for herself, and
+started digging in it with her face, with satisfied exclamations.
+
+</p><p>I was full before I could even realize it. Alette flew around me with
+a smile. I had newly found respect for her, realizing that her
+knowledge of the place was much deeper than I could have even
+imagined. 
+
+</p><p>My belly full, I decided to follow her around for a little while, out
+of curiosity. She didn't seem to mind my company. I quickly noticed
+her fondness for flowers: whenever we would pass by a flower, she
+would approach it, study it with attention for a very long time. A few
+times, she almost seemed lost in pure admiration. 
+
+</p><p>"Here!" She said, pointing at a orange tinted flower. "Smell it."
+
+</p><p>I obeyed, curious. I immerged my nose in the flower, and inhaled. It
+was as if I had just stuck my nose in the butt of a pig. I pulled
+back, disgusted, as Alette flew around me, her tiny, cristalline laugh
+dancing from ear to ear. 
+
+</p><p>I ended up becoming good friends with Alette, even if for a short
+while. I stayed on the hill for another day to rest, enjoying the
+pleasantly tasty new fruits and leaves that she helped me find --
+although I became wary about sniffing any more flowers she got near
+to. We watched the night sky above during the night, her magical dust
+adding shine to the bright starfield. 
+
+</p><p>When I had to leave, we were both sad. We didn't say anything: she
+just hugged my neck and gave me a light kiss. Then she flew away, up
+in the sky, as I moved into the forest, with a heart that was both
+lighter and heavier than when I arrived at that hill. 
+
+</p><p>
+</p> </div></div><hr></div><div class='content'>
+<img src='art/goblin.png' class='monster-image' id='goblin'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Egruda</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Goblin</b></li><li>Habitat: <b></b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>Movail</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/movail2' target='_blank'>Twitter</a></li><li><a class='author-link' href='https://www.instagram.com/movail2/' target='_blank'>Instagram</a></li></ul></li><li>Story by <b>BountyHunterOfLewd</b></li></ul>
+<div class='button monster-button' data-monster='goblin'>Open Diary Entry</div>
+
+<div class='story' data-monster='goblin'><p>
+As I continued my journey, I found myself running low on supplies,
+especially healing and some endurance potions. Luckily I came across a
+nearby town that should have what I’m in need of... or at least that’s
+what I hoped for. Turns out some of these villages like to sell
+potions at a hefty price, even though they aren’t of good
+quality. Such a shame. Luckily for me, a few of the locals told me of
+a potion maker who sells potions for a decent price and are way
+better. I had to see this for myself.
+
+</p><p>Oddly enough this potion maker seems to live out in the woods. Does
+she just not like people or something? And then it hit me! Or should I
+say “SHE” hit me! A feisty goblin girl with what appear to be potions
+tied into her hair! She seemed feral at first, but seemed to realize
+that I was just a common adventurer so she flipped back
+cautiously. She definitely didn’t trust me, but seemed to understand
+that there must have been some misunderstanding between us. I wasn’t
+too sure as I found one of her potions dripping on my head... which made
+me pass out.
+
+</p><p>Soon enough, I found myself in what seemed to be a little hut. Inside
+was a small nest like bed, a small fireplace, and a table full of
+potion making kits. Was I in the potion makers home? Then I found my
+new goblin friend, who I learned to be Egurda, entering with... eels?
+And to my surprise, I found the popular potion maker after all.
+
+</p><p>She apologized in a very pouty way for what happened to me, since
+apparently one of her poison bottles broke onto my head, causing me to
+go unconscious. She was easy enough to clean me up, which made me
+worried about her own safety, but luckily goblins have an incredible
+immunity to poisons, so she’s used to working with them easily with no
+issues. Was it even nice enough to cook up some eels to help me regain
+my energy, and can I refuse an apology meal from a lovely gob-girl?
+Apparently eels have oils that Egruda uses for her potions... and they
+taste amazing too surprisingly!
+
+</p><p>As we ate, she would grab potions and sip them. Odd to say the least,
+but apparently she likes testing her potions on herself. Plus she was
+making sure she got actual healing potions and not anymore poisons to
+give me to heal. And by the gods do they work wonders! It was like I
+was a new man! Honestly it’s a wonder people don’t come to her often,
+but then again, she doesn’t seem to have much common sense seeing as
+she attacked a random stranger, drinks her own products, and ties the
+bottles onto her own hair. I mean it's a very attractive trait not
+gonna lie. Plus it’s not like she doesn’t go to town from time to
+time, but I’m sure a solitary creature like her would prefer to stay
+out here and stay clear of crowds of people.
+
+</p><p>Though the nice chat would soon be interrupted after the healing and
+eating is done. Apparently she’s been keeping tabs on payment that I
+owe! I asked her what she was talking about, which she explained that
+I broke a poison bottle, ate her food, took time from her potion
+making by staying in her hut, and enjoyed her “samples!” I couldn’t
+believe what I was hearing! I was flabbergasted, angry, yet very
+impressed with her ethics and skills in math. But to make things
+worse, I apparently lost my gold pouch! I was so screwed! And not in a
+good way!
+
+</p><p>I explained that I didn’t have any gold, which seemed to annoy her a
+bit. Luckily she does trades for goods and even more bottles for her
+potions... which seems strange to give a potion bottle just to get
+another, but I’ll be here all day thinking about it if I don’t figure
+a plan out! I didn’t really have much to trade with her... then I
+noticed her looking down towards my lower area. I was a bit curious at
+first, but apparently she would be willing to clear my debts if she
+could have some... “human samples.” Now honestly, this seems like a
+strange form of payment. But honestly I see no problems with this one
+bit, so we let the “trading” commence.
+
+</p><p>After basically about a day or two of “trading” and “negotiating,” I
+was able to clear my debt to Egruta and even get some potions in case
+I needed some healing along this journey of mine. Before I left, she
+gave me a peck on the cheek, causing her to blush. Adorable. She told
+me that I’ll have to come back to her shop to get some more potions if
+I need them. And after our little “transaction,” I will definitely
+have to keep that offer in mind.
+
+</p><p>
+</p> </div></div><hr></div><div class='content'>
+<img src='art/harpy.png' class='monster-image' id='harpy'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Enderi<span class='font-edit'>k</span>a</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Harpy</b></li><li>Habitat: <b></b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>Elsen</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/Annadraw4' target='_blank'>Twitter SFW</a></li><li><a class='author-link' href='https://twitter.com/EliseanNsfw' target='_blank'>Twitter NSFW</a></li></ul></li><li>Story by <b>BountyHunterOfLewd</b></li></ul>
+<div class='button monster-button' data-monster='harpy'>Open Diary Entry</div>
+
+<div class='story' data-monster='harpy'><p>
+I don’t know how, but I somehow traveled from the forest area that
+Nali lives in to all the way up this cold mountain side! Like how in
+the gods' names did this happen?! Well either way, I was going to
+freeze to death if I didn’t find my way down soon. Sadly it seemed the
+path only went higher and higher.
+
+</p><p>Before I passed out, I thought I saw wings flying towards me... Seems
+that the angels would finally claim me! Yes! I’m ready, beautiful
+angels for my sexy reward!
+
+</p><p>Sadly, that was not the case. But silver lining, it seemed that I had
+survived. Though for how much longer, I’m not sure. So when I woke up,
+I found myself in some caves. Though unlike the arachne’s cave where I
+found myself laying in a web bed... I found myself in a nest... full of
+eggs!
+
+</p><p>As soon as I stepped out, I was greeted by several peering eyes, as I
+found myself face to face with the bird-like creatures known as
+Harpies. Each one with lovely feathers that look like several birds we
+know. Before I could properly say anything, some harpies grabbed me by
+my bag  with their eagle-like talons and took me to what I gather to
+be some sort of throne room, where I’d come to face a majestic beauty
+that is Queen Enderika. 
+
+</p><p>Her feathers were beautiful shades of red, and appeared taller than
+the other harpies... plus the fact that she was naked with the exception
+of her necklace and some strange golden band on her left foot. She was
+also protected by what I’m guessing were her royal guards, who were
+wearing beautiful white dresses. Probably to let the queen’s beauty be
+the focus, not that she needs them too.
+
+</p><p>I was expecting some sort of queenly personality that claims her to be
+better, but she was actually calm and peaceful. Even apologized if I
+was frightened. Apparently some of the hunters found me and brought me
+back to their kingdom, using their bodies to warm me up till I
+recovered. Definitely happy about that for sure.
+
+</p><p>I was explaining how I was on a quest to study monster girls, but as I
+got closer, the guards let out a high pitched screech that made me
+cover my ears as tight as I could. Fortunately, Enderika got them to
+stop. Honestly gotta appreciate their dedication to protecting their
+queen
+
+</p><p>After that, the harpy queen offered to show me around the kingdom. How
+could I turn down an opportunity to see the kingdom? It’s truly
+amazing how this kingdom works. While some harpies go hunting for
+food, some of the soldiers help keep them safe, thanks to their
+chainmail armor and knifed up talons
+
+</p><p>The queen explained to me how she lived for centuries and thus was
+able to keep her people safe and flourished! Centuries old?! And yet
+she doesn’t look a day over Thirty! And soon We find ourselves in a
+nest that seemed to be nicely secluded from the others, where I was
+treated to some of her lovely singing voice!
+
+</p><p>I told her that it was nothing I’ve ever heard before and that I
+couldn’t get enough of it! She wrapped her feathers around me and
+whispered to me that she needed some more eggs to lay soon and that
+she hasn’t seen a naked human before either, wanting to see what
+beings without feathers look like. I like where this was going. And
+with her naked body pressing up against me... Yeah I was REALLY liking
+where this was going! Now of course I can’t go into too much detail,
+but the nest was shaking a lot that night, along with high pitched
+screeches of pleasure in the air.
+
+</p><p>I woke up later near the base of the mountain, my clothes acting as my
+blankets and my bag the pillow. I seemed to have gotten some
+scratches, which honestly, completely worth it. After I got dressed, I
+found a beautiful red feather. A nice memento to remember this
+journey.
+
+</p><p>
+</p> </div></div><hr></div><div class='content'>
+<img src='art/harpyquinn.png' class='monster-image' id='harpyquinn'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Avelyn</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Harpyquinn</b></li><li>Habitat: <b></b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>Sector</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/Sector_Sphere' target='_blank'>Twitter</a></li></ul></li><li>Story by <b>BountyHunterOfLewd</b></li></ul>
+<div class='button monster-button' data-monster='harpyquinn'>Open Diary Entry</div>
+
+<div class='story' data-monster='harpyquinn'><p>
+I’m not exactly sure how to feel about this entry. Not that she isn’t
+attractive or anything. However, I hadn’t known of the danger I could
+have been in with her. For you see, Avelyn is not as she seems. I
+encountered her in the owl-folk kingdom, where she is the court jester
+for the Owl king. However, this was a facade. For this being was
+actually an assassin and a self proclaimed Harpyquinn.
+
+</p><p>Now for those who are unaware, Owl-folks are very similar to harpies,
+only they appear mostly human with their wings connected to
+them. Their eyesight is enhanced and can see in the dark, razor sharp
+talons, and can turn their heads 270 degrees, these folks can be
+gruesome killers. And for Avelyn, she is living proof of this. And yet
+I’m not exactly sure why she calls herself a Harpyquinn when the owl
+traits are obvious. Well might as well move on or else I’ll be sitting
+here all day with a thousand pages written about this!
+
+</p><p>See, the Owl king decided to have a feast to celebrate his birthday,
+which only the nobles could go to. I figured I’d sneak in and see how
+the Owl-folks celebrate such things... And maybe meet a hot owl lady
+hehe.But getting in was not going to be easy, especially since this
+was a private event. But luckily, a woman in jester clothes came to me
+and snuck me in. This woman I have never met before managed to get me
+in. I thanked her and asked her why, only to get a strange stare from
+her before leaving. Odd for sure, but I was in.
+
+</p><p>It was quite the elaborate party too in all honesty. Lots of food and
+laughter filled the halls of this castle. And of course the king,
+feeling festive, called for the court jester. And to my surprise, was
+the girl who helped me sneak in, who I’ll soon learn to be the
+Harpyquinn herself.
+
+</p><p>She was very nimble and flexible with her dances and even cracked a
+few jokes that even made the snobs laugh at. I couldn’t keep my eyes
+off her for even a second. Especially when she threw a dagger at the
+king, killing him almost instantly. Well that’s one way to end a
+party. Everyone began to panic and run in terror, while guards tried
+to capture her. I don’t know what possessed me to do this, but I ended
+up taking her hand and bravely led her away from the crowd.
+
+</p><p>Sadly my gesture was met with some hostility as she seemed to be
+distrusting of me. Though reminding her that she helped me earlier
+seemed to set her mind at ease, thus allowing us to escape. Won’t get
+into all the details on this, but just know we made it out safely.
+
+</p><p>After narrowly escaping the authorities, I finally scolded the
+assassin for what could drive her to cause such a heinous crime! We
+bickered for a bit and she threatened to kill me, which I respectfully
+reminded her that I saved her life. After a bit of arguing, we agreed
+to continue our escape from the city for good measure. We even found
+proper disguises, which she seemed surprisingly impressed by.
+
+</p><p>As we made our way out of the city. She explained to me the reason she
+was out here was for a job that could save her childhood friend’s
+life. I can’t go into too much detail, but her friend Emyl was in a
+sort of accident that left them crippled and disfigured. She was
+abandoned as a child so she couldn’t just leave her friend like others
+had, thus signing contracts as an assassin to keep her friend
+alive. And after this, will set them for life.
+
+</p><p>I can’t say I agree with these methods... but I can’t blame her
+either. I told her that as long as she and her friend can stay safe,
+then that’s all that’s important and that they should go somewhere
+where no one will find them. She looked at me in curiosity. Guess she
+hasn’t had anyone think or consider her well being.
+
+</p><p>We finally made our way out and made it to the forest. Here, she’ll
+have better cover to fly to safety. But oddly enough before leaving,
+she said she wanted to thank me for helping her out. She’s super cute
+when being a bit shy. But before I could say anything else, she pushed
+me into some nearby bushes to show her gratitude. I then woke up to
+find myself in the bushes still and my trousers removed. Seems she
+left for her friend. As I continued my journey, I had a strange
+feeling that I was being watched from then on.
+
+</p><p>
+</p> </div></div><hr></div><div class='content'>
+<img src='art/hydra.png' class='monster-image' id='hydra'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Triad</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Hydra</b></li><li>Habitat: <b>Rock Mountains</b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>reer</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/Sweaty_Socks' target='_blank'>Twitter</a></li></ul></li><li>Story by <b>fullmontis</b></li></ul>
+<div class='button monster-button' data-monster='hydra'>Open Diary Entry</div>
+
+<div class='story' data-monster='hydra'><p>
+I've mentioned many times how, as pleasurable a lot of my "research"
+has been, there have been encounters scary enough to
+instill doubt in my passion for this project. And while many of the
+encounters have been extremely dangerous, none have struck fear in
+my soul as much as the hydra
+
+</p><p>The desert had finally come to an end, leaving place to dusty rocks
+and dry land and the first timid appearances of vegetation. I could
+finally find rest under the shade of these monumental stones, catching
+up the energies that had evaporated in the long walks in the hot sun.
+
+</p><p>It was then, that I felt a presence. I turned around, just to see a
+dark figure disappearing in a crack in the rock I was sitting upon. I
+immediately tensed up: maybe the sun had been playing tricks on my
+mind, but the size of the thing that just disappeared was much larger
+than me, and I was pretty sure I had spotted more than one head. 
+
+</p><p>A female giggle among the rocks didn't ease my anguish. My blood
+chilled in the scorching air: seems like I had again fallen in the
+lair of some creature. My dumb excitement was burning up, holding back
+the survival instincts that were screaming to me to leave this place. 
+
+</p><p>I looked around, paranoid. I then saw burning eyes looking at me from
+the darkness. Even with my mind obfuscated by fear, I could tell that
+there were more than one pair of eyes looking at me.
+
+</p><p>"Hey!" I called out at the figure. I knew that if it had ill
+intentions, I would probably woldn't still be alive, but that didn't
+quench the weight that had fallen on my stomach.
+
+</p><p>A giggle echoed against the walls of the rocks. Then, the burning
+eyes emerged from the shade, showing the heads they belonged
+to. Three, to be exact, all with different features but all attached
+to the same body, which was crawling on all fours in my
+direction. Then, she stood up, clawing at the wall.
+
+</p><p>She was massive: even if I stood up, she would still tower an arm and
+a finger above me. Her three head stared at me with surprisingly
+contrasting emotions: one head.
+
+</p><p>Her body was definitely female. And well endowed, to the point where
+I could feel movement in my pants despite the dangerous nature of the
+encounter. And despite the rather menacing looks the snake heads on
+her back were sending my way, moving around their heads in circles,
+the human heads were staring at me with a more than interested look. 
+
+</p><p>She approached me, and leaned in my direction. I just stared in her
+eyes, trying to push away the instinct of running away. Her generous
+breasts, hanging from her chest, were dancing in front of my eyes.
+
+</p><p>Then, one of the head smiled at me. She looked at the other heads, who
+seemed to share the same sentiment. I was almost certain the creature
+was about to eat me, but instead, she kneeled in front of me, and
+started running her hand on my chest. 
+
+</p><p>As absurd as that way, they seemed to be attracted by me.
+
+</p><p>I don't know if it was because I was the first male creature that was
+in the area, or there were 
+
+</p><p>I gulped. A gleam in their eyes suggested me that their intentions
+were more carnal in nature than I though. To be fair, as much as there was a part of
+me that was sexually curious about the whole situation, my largest
+feeling was just to get up and run away from that frightening
+encounter. 
+
+</p><p>Their hands then ripped my shirt open, and their faces were apparently
+hungry for some physical contant. At that point I was both scared and
+excited about adding this new experience to my diary, but then
+something happened that changed the course of events.
+
+</p><p>The snake heads on their back were to this point just staring at me,
+moving hypnotically in the air. I had relaxed to the point where I
+wasn't focusing on them anymore, but they had still remained on my
+peripheral vision. But then, as the heat of the encounter grew, one of
+the snake heads moved towards me, and snapped their mouth right next
+to my ear. And with that, I snapped out of it too.
+
+</p><p>Now, with a cold mind, I realize that was just an excited reaction to the
+approaching intimacy. But at that moment, my mind was too engulfed in
+the situation to think rationally. The hydra was above me, ready to
+taste my body with their excited mouths, and all I could see was her
+trying to eat me alive.
+
+</p><p>I swished out of her hold, leaving behind my shirt, which she was
+holding in her hands, confused. We looked at each other for a moment;
+then, I grabbed my stuff from the floor, and ran away as fast as my
+feet let me. I only stopped running when my breath was cutting through
+my chest like a blade. When I turned around, half expeting her to have
+followed me, I only saw dust and rocks and the approaching forest at
+the feet of the mountain. 
+
+</p><p>I caught my breath, and I cursed as I adjusted my bag on my naked
+shoulders, going back to my journey. Relief and regret flooded my
+heart in equal parts, knowing that I lost a once in a lifetime chance of studying the sexual habits -- and skills -- of an hydra. 
+</p> </div></div><hr></div><div class='content'>
+<img src='art/imp.png' class='monster-image' id='imp'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Pun<span class='font-edit'>k</span>y</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Imp</b></li><li>Habitat: <b></b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>Zombiate</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/Zombiate' target='_blank'>Twitter</a></li><li><a class='author-link' href='https://www.deviantart.com/zombi-ate' target='_blank'>DeviantArt</a></li><li><a class='author-link' href='https://www.furaffinity.net/user/zombi-ate/' target='_blank'>FurAffinity</a></li><li><a class='author-link' href='https://www.patreon.com/zombiate' target='_blank'>Patreon</a></li></ul></li><li>Story by <b>fullmontis</b></li></ul>
+<div class='button monster-button' data-monster='imp'>Open Diary Entry</div>
+
+<div class='story' data-monster='imp'><p>
+Despite what you may think from what you've read so far, not all of
+the encounters are pleasant (at least not right away). In some cases
+they are downright dangerous, and they ended up leaving me hanging for
+my own dear life, an ironic conclusion considering how it all started.
+
+</p><p>I was fighting to progress in a surprisingly thick section of the
+northern forest near the Great River. I had to wack branches away left
+and right to advance even a few steps. For this reason, when I heard
+a female voice calling for help and a small struggling figure entered
+my view, I immediately thought of someone that got tangled in the
+vicious tightness of the trees.
+
+</p><p>Looking back, it was a rather suspicious setup: I immediately noticed
+this imp bent forward, hanging from a tree, vines tangled around her
+wrists and legs, and branches pinching away the already scant
+clothing. Her booty was generously exposed to me, a beautiful red moon
+in a prison of green.
+
+</p><p>As soon as I came in her view, she smiled, and she wiggled her behind
+sensually.
+
+</p><p>"Ohh, help me, dear adventurer. You look so strong and healthy! Help
+poor Punky get free!" Her tone was so melodramatic it almost felt like
+she was mocking me, in hindsight. However, her setup was carefully
+planned: with her bottom in plain view and her clothes struggling to
+contain her feminine bits, my attention waned a few times,
+caught in the plump beauty she was proudly exposing. I was shaking my
+head to keep focus and try to find a way to get her free; however, the
+way she sensually arched her back and moaned every time I touched her
+only made it more difficult to keep my focus. 
+
+</p><p>It was only when it was too late that I noticed her broken horn: a
+viscous and bright fluid dripped out of it on the branches, and
+wherever it touched it would fizzle and bubble up. It was only then
+that I noticed her smirking at me, and her tail hit hard on my leg.
+
+</p><p>I pushed back, and stumbled on my feet, soon falling with my back
+against a trunk. While my body retained sensibility, it was as like I
+couldn't move a single muscle without immense effort. It was as if I
+had been stuck in a jar of molasses. The imp, on her side, nonchalantly
+dropped the vines that she pretended to be trapped with, and walked in
+my direction, swinging her hips and waggling her tail, poison dropping
+from the tip. 
+
+</p><p>"Didn't get lucky today, it seems," she said, with a pout and her arms
+crossed against her chest. "Just a poor adventurer. You don't look
+like you have a lot of gold on you." She then approached me, and
+started caressing my shoulders. "Well, maybe I can still have a little
+fun with you, I guess..."
+
+</p><p>She ripped my shirt open, and started dragging her tail along my
+chest. She moaned, as more poison dripped from the tip of the tail: it
+shivered, as its touch with my skin was exciting her. Then her tail
+started rolling down my pants. And well... Let's just say that her
+tail is very skilled, in more ways than it appears.
+
+</p><p>It was quickly over, and she seemed to have enjoyed it just as much as
+me. But of course, for me the pleasure was over: as I was stuck on the
+ground, my body weighting like a thousand bricks, I saw her pull out
+her tongue to me mockingly, caressing me, then opening up my bag and
+snatching all the gold and food that I had left in there (luckily for
+me, she didn't know that this diary was by far my most treasured
+possession). Then she kissed me on the lips, and waved me goodbye,
+before disappearing among the trees. 
+
+</p><p>I won't go in details of the aftermath of the poisoning: I will just
+mention that it wasn't pleasant. It took me hours before I was able to
+move properly, and even then I remained nauseous for days after the
+incident. I was lucky honestly to come out of this with just a scar on
+my leg. I may have lost this encounter, but I got a lesson in
+return. 
+
+</p><p>That tails may have a lot more uses than I might have thought before...
+
+</p><p>
+</p> </div></div><hr></div><div class='content'>
+<img src='art/kitsune.png' class='monster-image' id='kitsune'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Hono<span class='font-edit'>k</span>a</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Kitsune</b></li><li>Habitat: <b></b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>Zedrin</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/zedrinbutt' target='_blank'>Twitter</a></li><li><a class='author-link' href='https://zedrinbot.newgrounds.com/' target='_blank'>Newgrounds</a></li><li><a class='author-link' href='https://www.youtube.com/zombiezephyr' target='_blank'>YouTube</a></li><li><a class='author-link' href='https://www.patreon.com/Zedrin' target='_blank'>Patreon</a></li></ul></li><li>Story by <b>Zedrin</b></li></ul>
+<div class='button monster-button' data-monster='kitsune'>Open Diary Entry</div>
+
+<div class='story' data-monster='kitsune'><p>
+I was rather exhausted by the prior day’s experiences, as well as the
+amount of traveling I still had to do. The weather was even beginning
+to bite some. As luck would have it, I encountered a shrine near the
+base of the mountainside.
+
+</p><p>It was quiet. No lights, no sound aside from the wind. I figured it
+wouldn’t hurt to take a quick rest, so I entered, hoping to rest a bit
+and clean myself up. While attending to myself, I felt a pair of eyes
+on me.
+
+</p><p>I looked over, to see a tall shrine maiden peering at me with
+curiosity, with eyes that almost seemed to glow turquoise. I
+apologized for intruding, though she merely silently stepped forward
+to relieve me of some of my bags. The air was cold, but as she
+approached, a certain warmth seemed to enshroud her. She bade me
+indoors, noticing how weary I was.
+
+</p><p>In hindsight, I should have seen that something was amiss, but
+something lured me in and made me lower my guard. The doors slid shut
+behind me, as the room fell dark. As she turned to face me, I noticed
+her eyes once more peering at me. They definitely were glowing, the
+light bouncing off the lenses of her glasses. The glow was soon joined
+by some soft, flame-like flickering, like three light-blue
+torches. This illuminated the room a bit more as the maiden stepped
+forward, revealing three vulpine tails with tips that danced of flame,
+and a set of ears that previously had been invisible to me. Motes of
+heatless fire materialized and vanished about her.
+
+</p><p>Part of me wanted to run, but something called to me to stay. I think
+maybe I was enchanted by her, but I don’t think that would have
+changed much. My mind raced. Kitsune weren’t known to be malicious,
+though kumiho could be another story. Still, should I survive, this
+research would be useful regardless.
+
+</p><p>She drew me further inside, insisting I lie down and rest with her; I
+couldn’t help but oblige. Her outer attire was loose, seemingly
+intentionally, as she was fond of teasing me as she moved to caress my
+head. Before I knew it, I was being undressed bit by bit, as she
+gradually doffed her attire as well. Charms or no, her figure was
+absolutely enchanting.
+
+</p><p>I noticed beneath her sheer underclothes that there were talismans
+covering some more... sensitive parts of her body. Were those meant to
+be enticing? Or were they a source of her power? She noticed my gaze
+and explained that they were to keep her power contained. That seemed...
+suspicious. A seed of doubt formed in my mind.
+
+</p><p>Before I knew it she had gently drifted to a position on top of me,
+her tails forming cushions to either side, as we were both bare. The
+flames on the tip lapped at my skin, but they didn’t burn. She
+sultrily commented she’d make sure we stayed warm for the evening. I
+couldn’t tell if that was some literal kitsune magic or just a
+euphemism. But, things were warm and comfortable, my heart was racing,
+and the thought crossed my mind: maybe I should stay here.
+
+</p><p>That thought didn’t quite feel like my own, though, and I became
+somewhat more alert, not wanting to lose myself to the pleasure. I
+didn’t feel any weaker. My mind went back to the talismans: they
+stayed on her breasts as we grew more intimate. Was what she said
+earlier a trick? Was she merely biding her time to finish me off? I
+had to know; I had to act.
+
+</p><p>At one point, while her eyes closed, I reached up and removed a
+talisman. She paused, the expression of joy vanishing from her face as
+she stared at me in disbelief, and then panicked. Immediately
+thereafter, there was a puff of what seemed like steam, and as my
+vision refocused, I saw her: instead of the tall, voluptuous figure
+from before, there was now one that was over a foot shorter. The
+flames extinguished from her tails, as they puffed up nervously, her
+face turning red to match. She was staring down aghast at her
+much-reduced chest, before she scrambled off of me with a shriek to
+immediately begin berating me, partially hiding herself behind her
+tails.
+
+</p><p>As adorable as she was, I flipped to my knees and turned my head down
+so I could apologize profusely. I explained my fears as best I
+could. She replied by saying I should be left to freeze outside, as at
+least then I’d be useful for starving crows. Though, after a pause,
+she cited that I was lucky for a reason I couldn’t quite make out, and
+offered a bit more of an explanation.
+
+</p><p>I’ve never heard of a case such as hers before; kitsune gain an
+additional tail for each 100 years they live, so she was at least 300,
+though a strange disorder made it difficult for her to keep in her
+magic levels that would match . The talismans I had removed were seals
+to keep her powers from escaping. She also explained that my prior
+fears were unfounded–while kitsune were also able to take life energy
+from mortals, any energy she “borrowed” from me should rapidly be
+replenished. She’s never actually (irreparably) harmed any mortal
+before.
+
+</p><p>Fortunately, there was a way for me to make it up to her, and it
+simply involved spending the remainder of the night at the
+shrine. Thanks to some new talismans and to my, as she put it, high
+vitality, by the time I left in the morning she was back to her
+voluptuous self, while I felt energized and ready to continue on my
+way.
+
+</p><p>Part of me honestly wanted to genuinely stay at the shrine a little
+while longer, but whatever lure had led me inside and had originally
+put that thought in my head was definitely gone, replaced with a kind
+but firm request to leave.
+
+</p><p>
+</p> </div></div><hr></div><div class='content'>
+<img src='art/kobold.png' class='monster-image' id='kobold'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">The Tribe</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Kobold</b></li><li>Habitat: <b></b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>Owl</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/thegoddamnowl' target='_blank'>Twitter SFW</a></li><li><a class='author-link' href='https://twitter.com/itsnsfowlets' target='_blank'>Twitter NSFW</a></li><li><a class='author-link' href='https://patreon.com/thegoddamnowl' target='_blank'>Patreon</a></li></ul></li><li>Story by <b>Owl</b></li></ul>
+<div class='button monster-button' data-monster='kobold'>Open Diary Entry</div>
+
+<div class='story' data-monster='kobold'><p>
+Believed to be distant cousins of fairies, kobolds are tiny mischievous creatures which like to take
+settlement on human households and constructions, usually causing the occupants to run away.
+
+</p><p>Although they can live in small communities, they are somewhat selfish and prefer to be alone. As
+they'd rather take an already built settlement than build their own, kobolds find amusement
+pulling pranks on the humans who are its hosts
+
+</p><p>A kobold may be a great helper in a household or establishment, thus they're sought after as
+servants, though they may prank others and even their hosts while doing their duties. Their sense
+of humor is often crude and borderline evil, but they generally do not seek to cause any
+permanent harm to others. They may sometimes steal things, and can have small hidden "treasure
+troves" all over the place
+
+</p><p>Although not outright evil, earning the anger of a kobold will make them relentlessly chase and
+torture their aggressor for the rest of their lives, making them an ill omen for some
+
+</p><p><b>Body traits</b>
+
+</p><p>A kobold on average lives for about 800 to 1400 years and stands at 1.3 meters (4'3'' feet), often
+being confused for small children at a distance. Their bodies can have varied builds, with vague
+draconic features, though they're often compared to jackals as well. Their limbs end in long fingers
+with long and extremely sharp claws, which help them to crawl, climb, and cling on most surfaces,
+and they’re normally seen walking in a tip-toe fashion. They possess elongated arms and torsos
+and the arms have proto-winglet appendages. Their heads are snake-like with big burning red eyes
+and wide mouths often resembling a slasher grin, showing sharp fangs. They possess long ears,
+often covered with a tuft of fur, and can hear things from hundreds of meters. They possess a
+short tail usually with a bushy tip, which improves their equilibrium, though exemplars with long
+tails can be seen also using it as a third limb
+
+</p><p>They possess great balance and precision, performing tasks faster and more meticulously than
+humans. They have great control over their body movements, allowing them to handle things and
+beings with great care, and grab and hold very small objects too. Their strength is not greater than
+a human’s
+
+</p><p>Males sport long eyelashes and sharper noses as well as more defined shoulders, and females
+tend to have softer features and pronounced hips and sways when walking. Any newborn hatched
+from a female will be a pure kobold with traits of both parents
+
+</p><p>There are at least 4 known types of kobolds:
+
+</p><p>- <b>Kobolds of the woods</b> are the most common, with extremely soft skins and manes, and
+can be covered in few fur patches. They feature a wide variety of colors, the most
+common being green and gray
+
+</p><p>- <b>Fire kobolds</b> are mostly diverse shades of red, their winglets are longer and more
+prominent, and their eyes glow with a fiery look. Their manes and fur also jolt upwards,
+and from the tips sprouts an energy that causes them to move like a soft flame. They also
+possess short horns
+
+</p><p>- <b>Underground kobolds</b> are somewhat bulkier, with wider necks and limbs, and shorter and
+spikier hair. Their teeth resemble molars, and their eyes are quite powerful, capable of
+seeing mineral structures but are sensitive as well. There’s a luminous appendage within
+their chest which allows them to light the darkness and confuse intruders, while also
+serves to identify themselves. They often keep their eyes closed and their ears help them
+through echolocation. Their skins are covered with mineral scales serving as poisonous
+throwing knives. Their bodies are generally of cobalt coloration, sometimes with red
+stripes
+
+</p><p>- <b>Sea kobolds</b> are taller and slimmer, their winglets resembling fins, and have very long
+manes and few to no hair patches. Their skin is also slick to the touch and has a sheen that
+makes it look moist. Their limbs are more evenly sized with shorter torsos. Their noses are
+prominent, and help them identify smells and materials even underwater. Their bodies are
+even more nimble and can move at very fast speeds, though they seem erratic and
+unnatural. Their colors are more muted, though they can have brighter spots resembling
+fish scales. They are the only kobolds capable of breathing under water
+
+</p><p><b>Magic</b>
+
+</p><p>A kobold only uses its magic by instinct but they can learn too. They have an affinity for fire magic,
+demonstrating an exceptional aptitude for it
+
+</p><p>The basic magic all kobolds know are invisibility, object manipulation, and some degree of
+levitation, depending of the species they may also have: shapeshifting for fire kobolds, light orb
+generation for sea kobolds, magma manipulation for underground kobolds, and perception
+manipulation/hypnosis for wood kobolds
+
+</p><p>Fire and underground kobolds can ride sprites/spirits that resemble salamanders and the former
+are generally seen with these creatures.
+
+</p><p>All kobolds possess a peculiar magic that "bypasses" any rules of every other kind of magic,
+effectively protecting them from all spells. This also allows them to use minimal output to use
+magic
+
+</p><p><B>Locations</b>
+
+</p><p>Kobolds of the woods can be found in deep forests, sometimes they also wander into parks and
+grasslands, but they always make a tree their place. They can also be found in human settlements,
+often acting as workers, though some prefer to hide and roam doing pranks to people
+
+</p><p>Fire kobolds can be found in most warm and dry places, sometimes soaring in open areas on top
+of fire sprites. They also frequent chimneys from households. Wildfires can also be a way to find
+them, either for being attracted to it or being the originators in the first place
+
+</p><p>Underground kobolds are found haunting caves or mines, and rarely wandering outside their
+home at day, as they prefer to avoid well lit areas, they’re easier to spot at nighttime
+
+</p><p>Sea kobolds are only seen in piers and any place where ships set off to sail, coming as getaways in
+the ship’s crew. They’re usually well hidden and it is hard to find one
+
+</p><p>One can tell if there are kobolds nearby by looking for deep thin scratches in surfaces, any unusual
+things in the environment, loud scratching and whirring as well as strange smells nearby
+
+</p><p><b>Food habits</b>
+
+</p><p>Kobolds are omnivorous. While they prefer meat, they also like pastries and milk, among other
+things. They absolutely love their favorite foods, and can be bribed with them
+</p> </div></div><hr></div><div class='content'>
+<img src='art/lamia.png' class='monster-image' id='lamia'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">The Witch Doctor</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Lamia</b></li><li>Habitat: <b>Desert</b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>paperskinned</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/Leftitude1' target='_blank'>Twitter</a></li></ul></li><li>Story by <b>BountyHunterOfLewd</b></li></ul>
+<div class='button monster-button' data-monster='lamia'>Open Diary Entry</div>
+
+<div class='story' data-monster='lamia'><p>
+I had heard rumors of a small village in the desert that harbored a
+witch doctor and I was curious about this individual. Perhaps they
+knew about the variety of monsters that lived in the desolate no-man's
+land. I had also heard rumors they sold various potions and even
+something called 'snake oil.' I set about finding this fellow scholar
+and made my way to the village. It was a long journey away from the
+usual roads I had previously traveled. Miles out into the rocky and
+sandy wastes.
+
+</p><p> Upon arrival in the evening, the village could only point me to the
+ trading post; apparently they were the only place that dealt with the
+ good doctor. I took the opportunity to refill my supplies while the
+ shopkeep filled me in on the whereabouts of this person. In return
+ for the information, they asked me to deliver a package to the doctor
+ on their behalf. I thanked them and left shortly after. She told me
+ it was half a day's walk along an old dusty trail, so I wasted no
+ time. Tired as I was from my journey so far, if I walked through the
+ night I could hope to arrive by morning.
+
+</p><p>I had arrived in the early dawn, having stumbled across the house
+described to me. It was a round, Adobe brick dwelling. Sort of an oval
+dome with a chimney, partially built into or under a cliff above. And
+laying across the roof of said dwelling, I could see the silhouette of
+a person's head and shoulders, just on the other side. The sun was too
+bright behind them so I walked around to introduce myself.
+
+</p><p>No one had told me the good doctor was a woman. Or a lamia, for that
+matter.
+
+</p><p> I tripped on what I thought was a piece of firewood perhaps. No
+ sooner than I had hit the ground I heard a shriek and a heart
+ stopping rattle. I could only stare.
+
+</p><p>The woman on the roof above me was beautifully tanned, her long hair
+ended in white. She had beautiful, golden eyes to match, though they
+were contorted into a menacing glare. I blushed as I couldn't help but
+catch a glimpse of her naked body before my eyes trailed lower. And
+lower. And lower. Her hands quickly covered her most personal regions
+but my gaze quickly traced her lower body back to my own feet where I
+had tripped.
+
+</p><p>She had a long, heavily scaled body. A snake's body. The tans and
+browns made diamond patterns that trailed from her human back near to
+the tail. The black and white scales of which were furiously ringing
+my ears as her surprised outrage was directed at me. I was scared.
+
+</p><p>She quickly coiled around herself with an impressive speed, doing
+everything to cover up. She slithered up and over the roof to the side
+I had come from. I sat in the dirt a moment before I got the nerve to
+get up and go back around.
+
+</p><p>She had found a ridiculously large hat to put on top of her head in
+the short time it took to round her house. It was straw presumably,
+tattered and old but it was large enough to allow her to wrap up
+underneath it, her tail still shaking. Warning me to not approach.
+
+</p><p>I slowly opened my travel pouch and removed the package I was carrying
+for her. Trying not to look at her directly, I held it out for her and
+told her I wasn't there to harm her, only a traveler and looking for
+the witch doctor.
+
+</p><p>For a long while, she only glared out at me from beneath her hat's
+brim. However, she eventually crawled her way towards me to take the
+item. And as I gave it to her, she swiftly tore my clothing away from
+my frightened body with her other hand. The speed took me by complete
+surprise. We were both naked in the morning light.
+
+</p><p>It shames me that I was quite...at attention, in spite of the danger I
+seemed to be in. My lower half was betraying my interest in her
+body. It was her turn to blush before she stammered something about
+being even and something else like an apology. Embarrassment got the
+better of her and she couldn't look me in the eye before fleeing
+inside her home. She did look down though. Repeatedly.
+
+</p><p>Eventually, she waved a hand out the doorway to invite me inside. I
+couldn't help but wander over...
+
+</p><p>It turns out this 'snake oil' is a special tanning lotion she
+makes. Apparently it's also good for 'personal' use. After a couple
+more nights, I think I'll explore this desert region some more. I've
+rather enjoyed my time spent...learning from the good doctor.
+
+</p><p>
+</p> </div></div><hr></div><div class='content'>
+<img src='art/mermaid.png' class='monster-image' id='mermaid'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Serene</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Mermaid</b></li><li>Habitat: <b>Ocean</b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>DaniDaniel</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://instagram.com/drawingwithneo' target='_blank'>Instagram</a></li><li><a class='author-link' href='https://twitter.com/drawingwithneo' target='_blank'>Twitter</a></li></ul></li><li>Story by <b>BountyHunterOfLewd</b></li></ul>
+<div class='button monster-button' data-monster='mermaid'>Open Diary Entry</div>
+
+<div class='story' data-monster='mermaid'><p>
+Today I decided to go to the beach, seeing how nice it was today. Little did I know that there was a large storm coming in, causing the waves to pick up, and I was in a bad spot seeing as the wave ended up swallowing me.
+
+</p><p>As I sank in the waters, I pondered if this is how I was to die. If it is, I would have preferred to die from a giant kissing my breath away or a ghost girl possession. But guess that wasn’t meant to be.
+
+</p><p>Then it happened. As the last bit of air escaped my mouth, something soft pressed against my lips, giving me life again. I could breathe again! Sorry angels, but I got some life left in me!
+
+</p><p>I soon woke up on the sandy beach, and instinctively looked around for my savior. I wasn’t having any luck until I saw a being with green skin, shells in her smooth seaweed- like hair, and… a fish tail? I- I can’t believe it! I GOT SAVED BY A FREAKING MERMAID!!!
+
+</p><p>She went back to hiding, mistaking my excited shout as a sign of panic and attack, but I clarified to her that I had no intention of harming her. After that, she seemed to come out of hiding and seemed to slowly become talkative to me. I told her how much of a hero she was for saving me, resulting in her blushing and telling me to stop in a teasing manner. Seems mermaids really do love being praised.
+
+</p><p>We chatted for a long while, to the point our stomachs began to growl. Luckily as a mermaid, she can catch fish easily thanks to her own fish tail. Once she dived in, I waited for what felt like almost an hour before she came back up with two huge colorful fish! Can she eat all that?! But she told me that the bigger and colorful they are, the better it tastes. Took a bit of cooking, but she was definitely right on the coin there.
+
+</p><p>We talked and laughed some more, and I feel we made an honest connection. She took my hand and led me back into the water. She plucked a peculiar bubble-like plant that acted as a mask to help me breathe underwater, thus able to lead me to an underwater cove. Feels oddly familiar.
+
+</p><p>It was filled with so many amazing things, and some lesser items, but I’m not going to judge Serene’s tastes in treasure. She showed me some of her items with great pride like a little kid happy with their precious dolls. She did seem irritated when I grabbed an old ring, but seemed to calm down when I put it back in its rightful spot.
+
+</p><p>She blushed and held my hand, causing me to blush too. We embraced and sank to the ocean floor. Lots of sand floating up for a bit.
+
+</p><p>I later emerged from the water like I was reborn from pleasure. Serene soon emerged as well and laid on the sand with me for a nice beach cuddling after the swim. And what a swim it was! Best swim I ever had. Will definitely have to come swimming here again at some point.
+</p> </div></div><hr></div><div class='content'>
+<img src='art/mimic.png' class='monster-image' id='mimic'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Tresha</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Mimic</b></li><li>Habitat: <b></b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>MisterSouji</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/MisterSouji' target='_blank'>Twitter</a></li><li><a class='author-link' href='https://www.pixiv.net/en/users/901117' target='_blank'>Pixiv</a></li><li><a class='author-link' href='https://www.deviantart.com/mistersouji' target='_blank'>DeviantArt</a></li></ul></li><li>Story by <b>BountyHunterOfLewd</b></li></ul>
+<div class='button monster-button' data-monster='mimic'>Open Diary Entry</div>
+
+<div class='story' data-monster='mimic'><p>
+I seriously hate going through dungeons. They’re cold, spooky, and
+could be home to some monsters that are actually dangerous. But they
+do at times have their occasions of usefulness. Some of these uses
+could be valuable treasures, new items, and, if lucky enough, a
+monster girl to meet. And depending how you see it, I managed to find
+all three in one! I say this because I made a lucky find with a large
+chest. Granted it seemed kind of too easy of a find seeing as it's in
+the middle of the room. But hey, free loot.
+
+</p><p>As I went to open the chest, a smell of death and, oddly enough,
+perfume? The chest then finished opening on its own to reveal to me a
+woman inside. So it seems I have stumbled onto the disguising creature
+known as a mimic. The young woman seemed pleased to meet me and
+introduced herself as Tresha, which is quite the fitting name there.
+
+</p><p>Tresha is a very attractive being, which makes sense as she’s likely
+the lure. Of course I remind myself not to fall for her womanly wiles,
+yet. Her yellow eyes and... other assets, definitely make it hard to
+resist though. Although what does help remind me not to fall for her
+is her tail. And by tail I mean her monster half. And by that I mean
+the chest. Yes surprisingly Tresha and the treasure chest are two
+different entities with their own thoughts and wants. The monster
+wanted to eat people, and Tresha wanted to “eat” people. Clearly,
+Tresha was a very lustful and seductive creature. Not that I minded at
+all of course.
+
+</p><p>She apologized for her tail’s rude behavior and tried to keep me
+hanging around in a seductive way. She explained that it gets lonely
+in a dungeon like this without anyone to properly talk to. Honestly I
+can get that, as while I do get to meet new monster girls I am doing
+this all alone. So of course I decided to sit for a bit and get to
+know her for my research.
+
+</p><p>I asked her how she and her species worked, how they eat and digest,
+what forms they can take, etc. ect. She couldn't exactly give me all
+the information I wanted which is understandable, but for the most
+part I learned more about how she’s connected to the chest. While they
+are of two different minds, they do share the connection, as
+mentioned, via being the tail itself. As for how other mimics work,
+they could apparently take the forms of chests, art pieces, doors, and
+even a house if they could! Although it seems to be that whatever the
+mimic bonds themselves to first, they stay formed like this
+forever. So in some weird way they are like barnacles. Strange, but
+still very attractive.
+
+</p><p>As we talked, Tresha seemed to be trying to lure me in again,
+promising riches if I followed her in. Of course I slightly noticed
+the chest salivating a bit. Man it's so weird to use the word chest
+when writing about mimics. But I told her that I wasn’t after her
+riches though and somehow managed to keep myself from being tempted
+in. Again most likely due to the smell of past victims that were
+unlucky to be digested.
+
+</p><p>She tried to assure me that her monster half doesn’t digest all who go
+in, as if knowing that this was a major concern. I kept refusing. She
+seemed to feel rejected almost, which I was surprised and saddened to
+see her so upset. Guess it’s rare for her to be told no by people.
+
+</p><p>I explained that I wasn’t after gold or anything like that and the
+monster side wasn’t the problem. But I could tell my presence was
+upsetting her monster half since I was talking to her rather than
+being used for feeding. I of course reassured her that she was so
+beautiful and that she deserves so much more in life. And that she
+doesn’t need to lure people in, as her lovely personality was all that
+was needed. She seemed shocked while the chest groaned in some sort of
+disgust. She seemed to cry for a moment, which made me panic and try
+to calm her. But As I got close to help, she suddenly kissed me. I was
+in complete shock but I couldn’t help but kiss her back. Before I knew
+it, she ended up pulling me into the chest, which closed up, locking
+me in with the lovely Tresha.
+
+</p><p>... Not sure how long it’s been since being locked in, but I finally
+managed to get the chest’s mouth to open. I was finally out! Though I
+was also naked, covered in kisses, sweat, saliva (likely from both
+Tresha and the chest) and some burns from what I imagine was the
+stomach acids failing to digest me.
+
+</p><p>Tresha soon followed and was back to her seductive attitude. She was
+even kind enough to give me some gold that she collected from some
+digested adventurers. Not completely sure how to feel about it, but
+hey, free coins. I of course thanked Tresha for the lovely time, which
+was responded with another deep kiss and telling me the feeling was
+mutual. Even her monster half gave me a lick feeling sad I was
+leaving, though perhaps it wanted one more taste of me. Still, I set
+off for my next adventure, not knowing what I would deal with
+next. I’m sure though that the next girl wont be one that will likely
+eat me... right?
+
+</p><p>
+</p> </div></div><hr></div><div class='content'>
+<img src='art/oni.png' class='monster-image' id='oni'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Nali</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Oni</b></li><li>Habitat: <b></b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>TushiTrash</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://www.tiktok.com/@tushi3_trash?is_from_webapp=1&sender_device=pc' target='_blank'>TikTok</a></li><li><a class='author-link' href='https://www.patreon.com/TushiTrash' target='_blank'>Patreon</a></li><li><a class='author-link' href='https://instagram.com/tushi3trash?utm_medium=copy_link' target='_blank'>Instagram</a></li><li><a class='author-link' href='https://twitter.com/TrashNSFWTush' target='_blank'>Twitter</a></li></ul></li><li>Story by <b>BountyHunterOfLewd</b></li></ul>
+<div class='button monster-button' data-monster='oni'>Open Diary Entry</div>
+
+<div class='story' data-monster='oni'><p>
+My adventure has led me to the forests up in the mountains, right
+behind a decently sized village. As I went through, I couldn’t help
+but feel an eeriness, as if I was being watched. It felt different
+from the fairy or the arachne... It was like I was being hunted down by
+something... or someone.
+
+</p><p>Just then, a slash nearly hit me! I barely managed to avoid taking the
+hit, but the tree next to me was not so lucky! I began to run the hell
+out of the forest as if my life depended on it! Which it does! Very
+much so! But as I ran, I couldn’t help but hear heavy footsteps behind
+me, the hunter closing me onto my location.
+
+</p><p>Before I could even see the exit, the being lept high up in the air
+and landed right in front of me! She rose up and revealed herself to
+be 8 feet tall! Almost as big as a Goddamn bear! On one hand, I was
+terrified for my life as I felt that I would be slain... On the other, I
+was strangely aroused. Before I could use my very real and expert
+defense moves, the hunter seemed to have been surprised as they
+lowered their sword and removed their mask to reveal a very gorgeous
+oni. Realizing I was being chased by a female hunter such as this rare
+breed of monster, I can definitely see she has blossomed into a woman
+beautifully. 
+
+</p><p>Soon after she began to apologize in a bit of a casual way as if her
+chasing me was a mere misunderstanding as she believed I was possibly
+a male oni hunting her down, she surprisingly gave me some jerky that
+she prepared herself. She had to assure me it wasn’t human meat since
+that was a common diet for carnivorous creatures like her. And
+honestly, it was really good jerky.
+
+</p><p>She introduced herself as Nali, the albino Oni of the forest. I was
+very confused when she said that, seeing as albinos are extremely
+pale, white haired and red eyed. However, oni skins are unique
+compared to humans, as their skins usually stay a certain color, the
+major sign of this condition being her white hair and spots on her
+skin. I mean it’s kind of cute to be honest.
+
+</p><p>I asked her why she chased me if she wasn’t going to eat me, to which
+the response was rather... intriguing. Apparently, she has a decent
+relationship with the villagers. In fact, the relationship is quite
+symbiotic with humans, as she seems to see us more as pets than
+food. I felt kind of offended, but there’s something about her
+dominant nature that I couldn’t help but feel ok with. 
+
+</p><p>As she talked about her... relations with people, I noticed her horns
+grew darker and darker. She breathed heavier and her eyes seemed
+hungry, even the third one! It seems she was in heat and the darker
+the shade, the stronger the heat is! I offered to help relieve some of
+this stress, which led to her immediately picking me up like I was a
+small cat and took me to her cozy little hut.
+
+</p><p>I won't go into too much detail as to how she treated me, but I will
+say that thanks to her genetics and power alone, it makes her a bit
+dominant with her partners. She would occasionally let me be the
+dominant partner, and she was very generous and careful with a smaller
+partner at least.
+
+</p><p>The next day was very nice yet sore as I had lots of um, let's just
+say bruises of passion. Extremely worth it. Though she wouldn’t let me
+go as she was still in a deep sleep, definitely treating us humans as
+pets. I managed to slip out somehow after tickling her a little... then
+her third eye opened. Was a little awkward, honestly.
+
+</p><p>Luckily after our chat, she understood that I had to move on with my
+journey as she would like for humans to learn that not all monsters
+are dangerous savages. She gave me a massive hug which cracked my back
+a bit, it felt rather nice. She was even kind enough to lead me to the
+village so I can resupply, thus being greeted by friendly faces who
+definitely accepted Nali in without fear. It makes me happy to see
+people actually treating monsters as actual people rather than killers
+that everyone thinks they are.
+
+</p><p>
+</p> </div></div><hr></div><div class='content'>
+<img src='art/slime.png' class='monster-image' id='slime'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Cobalt, Sapphire &#xFF06; Azure</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Slime</b></li><li>Habitat: <b></b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>pandaz90</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/Omar_dibuja' target='_blank'>Twitter SFW</a></li><li><a class='author-link' href='https://twitter.com/pandamachete' target='_blank'>Twitter NSFW</a></li></ul></li><li>Story by <b>BountyHunterOfLewd</b></li></ul>
+<div class='button monster-button' data-monster='slime'>Open Diary Entry</div>
+
+<div class='story' data-monster='slime'><p>
+It’s been a few hours since meeting my first monster girl. I already
+miss the arachnid. But, I felt a major determination to meet more
+monsters! So I continued on determined! And then as soon as I took my
+next step, I heard a large crack. And then I fell into a large
+hole. It took a moment to regain my consciousness, but I woke up and
+took in my surroundings. And it seems I found a forgotten dungeon
+that's... super clean.. This is not good.
+
+</p><p>As I traveled deeper and deeper into the dungeon catacombs, I ended up
+stepping in some strange liquid substance unknown to me. Little did I
+realize that these were actually slimes! I only found out after they
+began to shape and morph right from under my foot. Guess I woke them
+up. And what they formed was... a little surprising. The slime formed
+into three beautiful women, all with distinct personalities. Much
+different than what most adventurers say about slimes.
+
+</p><p>The first girl is Azure, the youngest of the group. She is very loud
+and aggressive, and of course likes to collect bones... wonder what she
+thinks of man bones? Next up is Cobalt, the middle slime. She is very
+shy and silent, as she doesn’t say much to strangers, which I can’t
+blame her for. She also likes to collect shiny things, especially
+shiny coins. And finally there's Sapphire, the oldest and original
+form of the trio. Unlike the other slime girls, rather than collecting
+physical objects, she prefers information on the outside world, though
+feels she gets little of seeing how either adventurers die here for
+various reasons or run out in fear for their lives.
+
+</p><p>I decided to rest here for a while since Sapphire’s curiosity seemed
+to keep me safe from being consumed, not that they seemed hostile to
+begin with. They seem to merely wander the area in search of food and
+other nutrients in the area. As they do, they surprisingly manage to
+clean up various surfaces. Super helpful, no wonder the dungeon seems
+super clean! Their sticky bodies also tend to pick up any treasures,
+weapons and um, bones, left behind. It's fascinating to see them
+digest their catches... as well as slightly disturbing. Any extra
+nourishments seem to go to their feet once they get their
+nutrients. And while slimes can dissolve any organic object, they can
+do so at any speed, thus allowing them to be able to enjoy the
+nutrients as needed. And if they get to a certain surplus, another
+slime girl will form.
+
+</p><p>As I studied them, Sapphire asked me lots of questions as well, as she
+of course wanted an update on the outside world. I just answered
+honestly that humanity is still as strange as usual. And of course
+told her how I plan to study monsters to show the world we can live in
+unison. Sapphire wanted to see my progress, to which the only one I
+had research on was the arachnid. Before I could get a chance to put
+my book away, Azure swiped my book away and passed it to her sister
+with a mischievous grin. It seems to pay to be the aggressive one.
+
+</p><p>Sapphire gratefully read my arachnid notes, which turned to a normal
+look, to a blushing reaction of embarrassment at the parts of our...
+ehem, relations. When Cobalt asked in her shy expression, Sapphire
+tried to keep her sister from feeling the same embarrassment. But
+Azure soon found out what her eldest sister read and soon blabbed to
+her, causing the middle slime to go from blue to a bit of a purplish
+color! Actually makes sense seeing as how blue and red makes purple.
+
+</p><p>The girls looked at me, which I felt extremely embarrassed about. I
+panned to make a run for it to save myself the scolding. But to my
+surprise, Sapphire grabbed my arm and pulled me close. She was
+explaining that she was curious about human touch. She then started to
+wrap her arms around me and started to kiss me. Azure yelled at
+Sapphire and told her to share! Even Cobalt was feeling upset and
+jealous, but was a bit more timid about it. Still, the trio decided to
+embrace me, causing slime to splash around the area. Don’t expect me
+to say anything other than slime here!
+
+</p><p>Speaking of which, I was covered in slime the next day. So somehow I
+felt so dirty, in the best ways, yet extremely clean. Cobalt was super
+kind to give me some gold whenever I needed supplies. I thanked the
+girls for everything, to which they thanked me in return for all the...
+experience I gave them. So now it’s clear that even a scary looking
+place can house very lovely treasures. BEST DUNGEON RUN EVER!!!
+
+</p><p>
+</p> </div></div><hr></div><div class='content'>
+<img src='art/sphinx.png' class='monster-image' id='sphinx'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Etoh</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Sphinx</b></li><li>Habitat: <b>Desert</b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>Sable</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://www.instagram.com/sablesketch/' target='_blank'>Instagram</a></li><li><a class='author-link' href='https://twitter.com/Sablesketch' target='_blank'>Twitter</a></li><li><a class='author-link' href='https://www.patreon.com/user?u=16712937&fan_landing=true' target='_blank'>Patreon</a></li><li><a class='author-link' href='https://www.etsy.com/shop/Sablesketch?ref=seller-platform-mcnav' target='_blank'>Etsy</a></li></ul></li><li>Story by <b>BountyHunterOfLewd</b></li></ul>
+<div class='button monster-button' data-monster='sphinx'>Open Diary Entry</div>
+
+<div class='story' data-monster='sphinx'><p>
+
+</p><p></p> </div></div><hr></div><div class='content'>
+<img src='art/succubus.png' class='monster-image' id='succubus'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Scarlet</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Succubus</b></li><li>Habitat: <b></b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>LethalBliss</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://www.instagram.com/lethal.bliss/' target='_blank'>Instagram</a></li><li><a class='author-link' href='https://twitter.com/lethal_Bliss' target='_blank'>Twitter</a></li></ul></li><li>Story by <b>LethalBliss</b></li></ul>
+<div class='button monster-button' data-monster='succubus'>Open Diary Entry</div>
+
+<div class='story' data-monster='succubus'><p>
+She first appeared in my dreams. Fleeting, leaving me wanting for
+more. Thoughts of her disrupted my daily routines, invaded the
+forefront of my mind, and distracted me from all my duties. Each night
+I lay in bed dreaming of a beautiful crimson figure and each day I
+long to touch her. I had to find out who she was; what she was.
+
+</p><p>After a week of searching I found my answer in the sorcerer's guild. A
+magic sigil was all that was needed to bring her into the world. They
+warned me though, that summoning her could cost me my soul. A fair
+price to satiate my desire. I left the guild and hastily returned to
+my room. I quickly dragged the furniture to the corners, inscribed the
+sigil on the floor and set the candles. I spoke the incantation and
+sat there waiting.
+    
+Nothing at first, then suddenly the sigil began to glow red and one by
+one each candle ignited. Magic energy sparked across the floor and red
+light danced out of the sigil, growing more brilliant each second. A
+warm gust of air filled the room and suddenly darkness. In an instant
+the magical performance in front of me ceased! I wondered what I had
+done wrong, was I not worthy!? Did I draw the sigil wrong!? These
+thoughts and worries consumed my mind until suddenly I noticed a dim
+light behind me followed by a voice.
+
+</p><p>“Finally.” Her sultry voice echoed in the room. I felt tears well up
+in my eyes. I wanted to meet her so badly and finally she was here.
+
+</p><p>I felt a nervous pit in my stomach. As I turned my head I saw her
+sitting on the bed behind me. Her form was something to behold,
+average height but exceptionally beautiful. Her skin was a flawless
+crimson shade,.Her eyes glowed red on black sclera, fearsome yet
+inviting at the same time. Long jet black hair flowed to the ends of
+the bed and at the top she was adorned with two black horns. Horns,
+tail and wings, there was no doubting she was a demon.
+
+</p><p>She sat relaxed and completely exposed. Her confident presence made
+me feel like a visitor in my own room.
+
+</p><p>“Who... who are you?” 
+
+</p><p>“You humans are always so attached to introductions.Anyway my name
+is...” She paused and thought for a moment
+
+</p><p>“Well you can call me Scarlett.
+
+</p><p>The succubus refused to give her true name and instead created the
+moniker Scarlet to hide her identity. According to what I've heard,
+knowing a demon's true name will give you some kind of power over
+them. A power I wish I had for I had no idea what was to come
+next. She patted an empty space on the bed next to her.
+
+</p><p>“Come” she commanded with a fanged smile.I hadn't noticed it before,
+but as I approached I saw three faintly glowing orbs circling her. In
+the center of each orb was what appeared to be a hot white
+skull. Scarlet shooed them off like flies. Flicking her hand at them
+until they dispersed back in the darkness.
+
+</p><p>“Past lovers.” she shrugged
+
+</p><p>“Sometimes the lines between love and lust get crossed. They just
+can't seem to get over me, not even in death. Now you won’t end up
+like them.  Well that’s as long as you satisfy me” she grinned.
+
+</p><p>She took my hand and pulled me onto the bed with her. Her crimson skin
+was soft and warm to the touch. Hotter than human skin, making one
+want for a warm embrace.She pressed her body against mine. Her warm
+amber scent washed over me like a comforting blanket. It was finally
+real the fleeting dreams had manifested into reality. She leaned in
+close pushing her soft breasts against me.I felt my face turn red, too
+stunned to speak.
+
+</p><p>“ I can taste your lust and ohh it's delicious” Her finger traced my
+lips
+
+</p><p>“You see it's not your soul I'm after, it's your desire, your passion,
+that hot feeling in your face.” She leaned in even closer. Only an
+inch between our faces, her hand brushed against my cheek
+
+</p><p>“Do you think you could give me that? Can you fill me with what I
+need?”
+
+</p><p>My entire body felt as if twisted in a nervous knot. I steeled myself
+and closed the gap between our faces. Pressing my lips against hers
+and giving her my answer. Her lips were soft and sweet and I was sure
+that soon all my desire and longing would be fulfilled. Finally the
+dreams that had plagued me would come to fruition.
+
+</p><p>
+</p> </div></div><hr></div><div class='content'>
+<img src='art/werewolf.png' class='monster-image' id='werewolf'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Taya</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Werewolf</b></li><li>Habitat: <b>Forest</b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>Crimellgrim</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://twitter.com/crimellgrim' target='_blank'>Twitter</a></li><li><a class='author-link' href='https://www.furaffinity.net/user/crimellgrim/' target='_blank'>FurAffinity</a></li></ul></li><li>Story by <b>BountyHunterOfLewd</b></li></ul>
+<div class='button monster-button' data-monster='werewolf'>Open Diary Entry</div>
+
+<div class='story' data-monster='werewolf'><p>
+The full moon is what I like to call the nocturnal sun. For during this time, creatures of the night come out to have their time in the world when all the creatures of the day go find someplace to rest.
+
+</p><p>Unfortunately, I’m still stuck out here in the forest, since the closest village is still a ways away from here. So it’s camping time for me! Luckily, thanks to some leftover loot from some of the girls I encountered, I bought myself a very handy camping tent with a complete supply set, so I am set. And hey, the night is actually quite lovely, cause the full moon’s out. So what could go wrong?
+
+</p><p>A few hours into my sleep, I heard a twig snap. Now I don’t have much weapons, probably should have prepared myself for something like this, so I improvised and held my pencil at the ready until I could get something stronger. Not that there are many things out here that could harm what I’m up against.
+
+</p><p>As I stepped out of my tent, I was prepared to face off against whatever was out here. I looked… nothing. Perhaps it was my imagination. That’s what I thought anyway before she appeared. A creature of floof, sharp claws, bloody fangs, and eyes that glowed with blue and red; a mighty wolf. Again, so I thought. For this creature began to stand on their hind legs, to reveal a surprisingly womanly figure. Oh shit! A WEREWOLF!!!
+
+</p><p>I’ll be honest, I screamed like hell feeling like I was about to be ripped to shreds, but instead I opened an eye to see her looking at me strangely, perhaps a bit annoyed.
+
+</p><p>“The hell you yelling about?!” She asked aggressively. She then got up close to me as if to claim dominance over me. Clearly she’s an alpha. “You picking a fight or something?!”
+
+</p><p>I couldn’t respond as I was trying to calm myself down. She just sighed and sat back down for a second. She seemed to be painting a bit. I tried to ask her what was wrong, but she tried acting tough and claimed that she was fine, just hot is all. While my mind definitely agreed that she was “hot”, I think she’s literally hot seeing how canines sweat through their tongues.
+
+</p><p>She seemed to be having something going on as she panted more and more, feeling hotter and hotter. Something’s definitely not right, I mean you could fill several water pouches of her saliva… or sweat. 
+
+</p><p>Soon enough she had a face of realization. She looked at the ground, which my morbid curiosity told me to look at what caught her attention. It was a small flower that I recognized only blooming in spring. That’s when I realized that she’s in heat!
+
+</p><p>She seemed heavily annoyed because apparently there were no males close by to mate with. Honestly I’m surprised she hasn’t torn into me yet with how aggressive she is. And yet she seemed to have a sort of pain, like an itch she couldn't get.
+
+</p><p>I timidly and shyly told her that if she needed it, I could help her with her mating needs. She seemed surprised, and I thought she would tear my face off. I just explained that I couldn’t see her in pain and that she needed relief, but before I could finish my sentence, she pounced onto me like an excited dog, crashing us right into the tent.
+
+</p><p>After the mating ritual, she and I laid in the shredded tent acting as a blanket to our naked bodies… There goes thirty gold coins I’ll never see again. And yet it was worth it to lay with the now satisfied werewolf, which made me glad… even though she has quite the snore. Now let's hope these love bites don’t go and turn me.
+</p> </div></div><hr></div><div class='content'>
+<img src='art/zombie.png' class='monster-image' id='zombie'>
+</div><div class="content">
+<div class='monster-description'>
+<div class="title-container"><h3 class="title">Cordelia</h3></div>
+<ul class="fancy-bullets monster-desc"><li><span class="desc">Monster Type:</span> <b>Zombie</b></li><li>Habitat: <b></b></li></ul>
+<ul class='authors fancy-bullets'><li>Art and Design by <b>TheBigDuurnt</b><ul class="author-link fancy-bullets"><li><a class='author-link' href='https://www.instagram.com/thebigduurnt/' target='_blank'>Instagram</a></li><li><a class='author-link' href='https://twitter.com/thebigduurnt' target='_blank'>Twitter</a></li></ul></li><li>Story by <b>BountyHunterOfLewd</b></li></ul>
+<div class='button monster-button' data-monster='zombie'>Open Diary Entry</div>
+
+<div class='story' data-monster='zombie'><p>
+As I was wandering the beaches looking for more sea creatures to...
+interact with, I ended up tripping over something wrapped in seaweed,
+or in this case someone. As soon as I realized they weren’t breathing,
+I checked their pulse... sadly, the poor woman was dead. But then she
+sprung to life! Well sort of. 
+
+</p><p>See, Cordelia just so happens to be a zombie! I didn't notice at first
+since I checked from behind, but soon came to find out when I saw her
+milky eyes that you can drown in alongside the huge hole that happens
+to be right next to her mouth. She stumbled towards me, causing me to
+back up slowly till we both tripped onto the sand. I thought I was a
+goner and would be next on her menu, however, she seemed more focused
+on something else it seemed. Like she finally had someone to talk
+to... was she hugging me? Well dead or not, she surprisingly had a
+warm feeling... and her breasts were like they had not decayed at all
+truth be told.
+
+</p><p>Now there are two ways zombies are "born" and that's through
+necromancy or being bitten by another zombie. Strangely enough though,
+she seems to have been brought back through necromancy, yet has a bite
+mark on her leg. Though the bite might have been some roleplay that
+she was very into, not that I'm one to judge. 
+
+</p><p>I definitely noticed stitches alongside her body, which suggests that
+someone tried to fix her up, though not sure to what extent... or if she
+was even a zombie at this point. Still not sure the stains on her
+clothes are either dirt... or blood! Most likely the latter in all
+honesty. With that said, she does seem to enjoy the water, or is at
+least content and docile when in or near the water. Perhaps she was a
+common beachgoer in life... would explain her beach bra.
+
+</p><p>Watching her, I've noticed she seems to have a peculiar diet. While
+she hasn't tried to eat me yet, at least to my knowledge, she has
+definitely chased down some unsuspecting beach goers. Some manage to
+get away unharmed, others... not so lucky. But if she has no people to
+chase down, she seems to manage well enough with eating the local sea
+life. Proof of this is the countless amounts of fish that are somehow
+never completely eaten, which helps attract seagulls for her to try to
+catch and eat. She proves to be a bit more mentally stable than most
+zombies, yet not fully there. She's definitely trying though. Who
+knows, she's a rare breed that will change zombie history. Suppose
+time will tell. Now if only she'd stop trying to bite into me when I
+try to flirt!
+
+</p><p>Now some of you may be wondering, "Isn't it strange to be intimate
+with a dead girl?" While yes being with a dead girl is very taboo,
+undead beings are at least semi-alive. So questionable views of this
+relationship. However, that doesn't mean that zombies don't deserve
+love as well. And to be honest, while her skin is cold, she was rather
+warm on the insi- Sorry, just realized I was writing all that, so
+won't be going further than that.
+
+</p><p>
+</p> </div></div><hr></div>
+
+<div class="content" id="#closing">
+<img src="adventurer-final.png" class="monster-image"></img>
+</div>
+<div class="content" id="#closing">
+<div class="title-container"><h3 class="title">Closing Words</h3></div>
+<p>
+This is just but a taste of the adventures and ladies that I was lucky
+to experience in my long time as an adventurer. It's a hard job, and
+I'm both surprised and grateful that I still have all of my limbs intact, but
+every new entry in this diary puts up for weeks of grumbling bellies,
+hurtful feet and exhausted hearts. Every new page is
+ a piece of this magical world finding its home between these two
+leather bound covers. 
+
+</p><p>My dear reader, the journey is not over yet! Lots of weird and curious
+encounters still linger in the back of my mind like shadows of a
+magical past, and the time and patience required to filter them all
+through the tip of my lead is the only thing preventing me from adding
+more. Only the Gods above can tell if I'll be able to show you more of
+my adventures: but for now, there's only my backpack, my boots, and
+the world outside, waiting to be discovered. 
+
+</p><p>Thank you for reading!
+</p>
+<hr>
+</div>
+<div class="content">
+
+<div class="title-container small-margin"><h3 class="title">Credits</h3></div>
+
+</div>
+<div class="content-cover"><img src="back-cover.jpg" class="cover"/></div>
+</div>
+</div>
+<script src="menu.js"></script> 
+
+  </body>
+</html>
