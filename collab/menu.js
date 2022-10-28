@@ -1,37 +1,9 @@
 "use strict";
 
-// todo: move to position when closing and opening a story
-// todo: index
-// todo: style hyperlinks
-
-var monsters_to_authors =  {
-    alraune: "Fishthemudkip",
-    arachne: "fullmontis",
-    cyclop: "Karnoss",
-    dragon: "Nickzilla2000",
-    dullahan: "Scarlet",
-    elemental: "RHappyFace",
-    fairy: "Nacon",
-    goblin: "Movail",
-    harpy: "Elsen",
-    harpyquinn: "Sector",
-    hydra: "reer",
-    imp: "Zombiate",
-    kitsune: "Zedrin",
-    kobold: "Owl",
-    lamia: "paperskinned",
-    mermaid: "DaniDaniel",
-    mimic: "MisterSouji",
-    oni: "TushiTrash",
-    slime: "pandaz90",
-    sphinx: "Sable",
-    succubus: "LethalBliss",
-    werewolf: "Crimellgrim",
-    zombie: "TheBigDuurnt"
-};
-
 var stories = document.getElementsByClassName("story");
 var story_buttons = document.getElementsByClassName("monster-button");
+var story_close = document.getElementById("button-close");
+var story_close_container = document.getElementsByClassName("button-close-container")[0];
 
 function jump_to( id ) {
     window.location.href="#" + id; 
@@ -44,7 +16,7 @@ function open_story( id ) {
         story_id = id;
         story_elems[id].button.classList.add("hidden");
         story_elems[id].story.classList.remove("hidden");
-        story_close.classList.remove("hidden");
+        story_close_container.classList.remove("hidden");
     };
 }
 
@@ -79,24 +51,15 @@ function close_all() {
         e.story.classList.add("hidden");
         e.button.classList.remove("hidden");
     }
-    story_close.classList.add("hidden");
+    story_close_container.classList.add("hidden");
     jump_to(story_id);
 }
 
-var story_close = document.getElementById("button-close");
 story_close.addEventListener( "click", close_all);
-story_close.classList.add("hidden");
+story_close_container.classList.add("hidden");
 
 // create index
 
 function capitalize( string ) {
     return string[0].toUpperCase() + string.slice(1);
 }
-
-// var index = document.getElementById("index");
-// for( var monster in story_elems ) {
-//     var li = document.createElement("li");
-//     li.innerHTML = "<a href='#" + monster + "'><b>" + capitalize(monster) + "</b><br><span class='index-author'>by " + monsters_to_authors[monster] + "</span></a>";
-//     li.classList.add("button");
-//     index.appendChild(li);
-// }
