@@ -98,3 +98,11 @@ if( contact !== null ) {
   contact2.innerHTML += b+c+a+g+h+d+e;
   link.innerHTML="<span class='color'>" +b+c+a+g+ "</span>"+h+d+e;
 }
+
+c1 = ".gg/";
+c2 = "https://";
+c3 = "discord";
+c4 = "jpQEAcDPyU";
+
+document.getElementById("discord").href=c2+c3+c1+c4;
+document.getElementById("discord2").innerHTML = c4;
