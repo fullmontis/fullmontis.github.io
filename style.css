@@ -254,3 +254,6 @@ background-repeat: repeat-y; background-attachment: scroll;}
 
 .avatar { max-width: 100px; }
 .avatar-container { width: 100%; text-align: center; } 
+
+
+.oc-block { width: 80vw; height: auto; max-width: 320px; position: relative; border-radius: 25px; overflow: hidden; margin:10px; display: inline-block; }
