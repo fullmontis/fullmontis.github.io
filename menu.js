@@ -68,7 +68,6 @@ function openView(toggle, img, dest, is_comic) {
 	    }
     };
 }
-
   
 function toggleElement( element_id ){
   var d = document.getElementById(element_id);
@@ -90,13 +89,14 @@ var g='tis';
 var h='@';
 var s='mai';
 
-contact = document.getElementById('contact');
-contact2 = document.getElementById('contact2');
-link = document.getElementById('link');
+var contact = document.getElementById('contact');
+var contact2 = document.getElementById('contact2');
+var link = document.getElementById('link');
 if( contact !== null ) {
   contact.href= s+t+b+c+a+g+h+d+e;
   contact2.innerHTML += b+c+a+g+h+d+e;
-  link.innerHTML="<span class='color'>" +b+c+a+g+ "</span>"+h+d+e;
+  link.innerHTML = "<span class='color'>" +b+c+a+g+ "</span>"+h+d+e;
+  console.log(contact,contact2);
 }
 
 c1 = ".gg/";
@@ -106,3 +106,10 @@ c4 = "jpQEAcDPyU";
 
 document.getElementById("discord").href=c2+c3+c1+c4;
 document.getElementById("discord2").innerHTML = c4;
+
+var link_list = document.getElementsByClassName("link-list")[0];
+var open_links = document.getElementById("open-links");
+open_links.addEventListener("click", function() {
+    link_list.style.maxHeight = "none";
+    open_links.style.display = "none";
+});
