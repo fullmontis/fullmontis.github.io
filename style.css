@@ -4,16 +4,16 @@ body { width: 100%; margin: 0; margin-bottom: 0; background-color: #2d2346; colo
        background-image: url("icons/background-scroll.jpg"); background-repeat: repeat-y;
        background-attachment: scroll; background-position: right top; background-size: 120vw;}
 
-a { font-family: Nunito; color: #baa2fb; transition: color 0.5s ease-in; text-decoration: none; border-bottom: 1px dotted #baa2fb; }
+a { font-family: Nunito,sans; color: #baa2fb; transition: color 0.5s ease-in; text-decoration: none; border-bottom: 1px dotted #baa2fb; }
 .undecorated { border-bottom: none; }
 a:hover { color: #bc8eff; border-bottom: none; }
 b { color: #bfa8ff; }
 blockquote { background-color: #3f3557; margin: 0; margin-top:1.3em; margin-bottom: 1.3em;  padding: 1em; font-style: italic; color: #d1c6dd; }
 h1,h2,h3 { line-height:1.2em; font-weight: bold; font-size: 1.4rem; margin-top: 1.3rem;
            margin-bottom: 1.3rem; color: #d1aaff;}
-h1 { margin-top: 1rem; font-size: 2rem; font-family: Nunito;}
-h2 { font-size: 1.7rem; font-family: Nunito;  }
-h3 { font-size: 1.05rem; font-family: Nunito; }
+h1 { margin-top: 1rem; font-size: 2rem; font-family: Nunito,sans;}
+h2 { font-size: 1.7rem; font-family: Nunito, sans;  }
+h3 { font-size: 1.05rem; font-family: Nunito, sans; }
  
 ul { width: 90%; padding-left: 2em; }
 li { list-style: none; }
@@ -24,7 +24,7 @@ p { width: 100%; margin-top: 1em; margin-bottom: 1em;}
 #header { font-size: 5vw; background-color: #222; width: 100%; margin: 0;
           vertical-align: middle; overflow: visible; height: 50px; box-shadow: 3px 3px 3px 0 #190e25; text-align: center; }
 #sitetitle:hover { background-color: #996888; }
-#nav { margin: 0 auto;  display: block;  height: 100%; padding: 0; width: 100vw; font-family: Nunito;}
+#nav { margin: 0 auto;  display: block;  height: 100%; padding: 0; width: 100vw; font-family: Nunito,sans;}
 #nav > li { display: inline-block; vertical-align: top; width: 33.3vw; text-align: center; }
 #nav > li:hover { background-color: #996888; }
 #nav > li::before { content: none; }
@@ -32,7 +32,7 @@ p { width: 100%; margin-top: 1em; margin-bottom: 1em;}
                 min-height: 50px; line-height: 50px; cursor: pointer; }
 
 /* footer */
-#footer-list { font-family: Nunito; width: auto;
+#footer-list { font-family: Nunito, sans; width: auto;
 	    max-width: 90vw;
 	    margin-left: auto;
 	    margin-right: auto; text-align: center;}
@@ -154,7 +154,7 @@ p.wide{ margin-bottom: 2.5em;}
 .game-block { width: 90%; max-height: 180px; position: relative; border-radius: 25px; overflow: hidden; margin:0 10px 10px 0; display: inline-block; }
 .game-thumb { position: relative; top: -80px; width: 100%; filter: brightness(40%)}
 .game-description-box { position: absolute; top: 10%; left: 10%; text-align: left; width: 80%; max-width: 260px; }
-.game-title { font-size: 1em; font-weight: bold; color:#baa2fb; font-family: Nunito; }
+.game-title { font-size: 1em; font-weight: bold; color:#baa2fb; font-family: Nunito, sans; }
 .game-desc { font-size: 0.9em; color: #cec3f2; }
 .game-details { font-size: 0.9em; color:white; line-height: 1.3em;margin-top:0.5em; display:block; }
 
@@ -165,7 +165,7 @@ p.wide{ margin-bottom: 2.5em;}
 
 #open-links { margin-top: 1em; max-width: 400px; }
 
-.header { font-weight: bold; font-family: Nunito; color: #bfa8ff;}
+.header { font-weight: bold; font-family: Nunito, sans; color: #bfa8ff;}
 .small { font-size: 0.8em; line-height: 1.3em; list-style-position: outside; }
 .small > li { margin-bottom:1em; list-style-position: outside;}
 
@@ -191,19 +191,32 @@ p.wide{ margin-bottom: 2.5em;}
 .link-small { display: inline;}
 .link-big { display: none !important;}
 
-.link-list { margin: 0 auto; padding:0;  margin: 0; width: 100%; max-height: 400px; overflow: hidden; text-align: center;  }
+.link-list { margin: 0 auto; padding:0;  margin: 0; width: 100%; max-height: 400px; overflow: hidden; text-align: center;     
+             -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
+             -webkit-mask-image: linear-gradient(to bottom, black 0%,  transparent 100%);
+             mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
+             mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%); }
 .link-list > li { display: block; width:100%; }
 .link-list > li::before { content: none; }
 .link-button { width: 25px; vertical-align: middle; display:inline; }
 .link-list > li > a { transition: none; font-weight: bold; border-bottom: none; }
-.link-left { font-size: 0.9em; font-family: 'Nunito'; text-align: center; width: 90%; max-width: 250px; display:inline-block; color: white; padding: 0.5em; margin: 0 auto; margin-bottom: 1em; background-color: #8e4fd2; border-radius:10px; }
+.link-left { font-size: 0.9em; font-family: 'Nunito',sans; text-align: center; width: 90%; max-width: 250px; display:inline-block; color: white; padding: 0.5em; margin: 0 auto; margin-bottom: 1em; background-color: #8e4fd2; border-radius:10px; }
 .link-right { display:none; }
 
 .commission { background-color: #8e4fd270; border-radius: 25px; display: inline-block; padding: 0.5em; width: 95%;  max-width: 500px; margin-bottom: 2em; }
 span.color { color: #e2d5ff; }
 
-.oc { overflow: hidden; width: 200px; height: 500px; border-radius: 1em; }
-.oc-img { position: relative; height: 100%; display:block }
+.oc-area {width: 100vw; display: flex; align-items: stretch; justify-content: space-evenly; flex-wrap: wrap;}
+.oc { position:relative; overflow: hidden; width: 200px; height: 500px; border-radius: 1em; margin:0 auto; background-color: #110f31; margin: 0 1em 1em 0;}
+.oc-img { position: absolute; height: 100%; display:block;top:0;left:0;              
+          -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
+          -webkit-mask-image: linear-gradient(to bottom, black 0%,  transparent 100%);
+          mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
+          mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 100%); }
+.oc-info { font-family: Nunito, sans;text-align: left; font-size: 0.9em; position: absolute;  bottom:0; padding: 2em 1em; line-height:1.1em; font-size:0.8em; }
+.oc-name{ font-size: 1.3em; margin-bottom: 0.5em;}
+.oc-subtitle {font-size: 0.9em; color: #cec3f2; margin-bottom: 0.5em;}
+.bold { color: #bfa8ff; font-weight: bold; }
 
 @media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
 }

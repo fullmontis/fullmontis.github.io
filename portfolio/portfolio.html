@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><title>fullmontis art portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+body { font-family: "Bebas Neue", tahoma, sans-serif; text-align: center; }
+a { color: #408fd5;}
+.title { font-size: 2em; }
+.desc { font-size: 1.1em; }
+.subtitle { font-size: 0.9em;}
+#title-box { display: flex; width: 100%; justify-content: space-around; flex-direction: column; align-items: stretch; align-content:stretch;  height: 300px;}
+#title-container { height: 100%; display: flex; flex-direction: column; justify-content: space-around; align-items: stretch; flex-wrap: wrap; }
+#title-container div { display: flex; flex-direction: column; justify-content: center;}
+#gallery {
+   line-height:0;
+   column-count: 1;
+   column-gap:5px;
+}
+#gallery img {
+   width: 100% !important;
+   height: auto !important;
+   margin-bottom:5px; /* to match column gap */
+}
+#slide {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+z-index:10;
+}
+#zoom {display:none; font-family: helvetica, sans-serif; color: #828282}
+#slide_image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.show { display: block !important; }
+@media screen and (min-width: 600px) { #gallery { column-count: 2 !important; } #zoom {display: block;} #title-box { height: 200px; }#title-container { flex-direction: row; height: auto;} }
+@media screen and (min-width: 1080px) { #gallery { column-count: 3 !important; } }
+@media screen and (min-width: 1200px) { #gallery { column-count: 4 !important; } }
+@media screen and (min-width: 1500px) { #gallery { column-count: 5 !important; } }
+
+</style>
+
+</head><body><div id="slide"><img id="slide_image" src="portfolio_a_files/Untitled.html"></div>
+<div id="title-box">
+<div id="title-container">
+<div class="title"><b>Andrea Montagna</b> <br><span class="subtitle">fullmontis</span></div>
+<div  class="desc">Pinup Artist<br>Character Designer<br>Comic Artist</div>
+<div>
+<div><b class="title">Art Portfolio</b><br><a href="mailto:fullmontis@gmail.com">fullmontis@gmail.com</a></div></div>
+</div>
+<div id="zoom">Click on images to zoom</div>
+</div>
+<div id="gallery"><img src="000.jpg"><img src="010.jpg"><img src="011.jpg"><img src="020.jpg"><img src="030.jpg"><img src="040.jpg"><img src="050.jpg"><img src="060.jpg"><img src="070.jpg"><img src="080.jpg"><img src="090.jpg"><img src="100.jpg"><img src="110.jpg"></div>
+<script>
+
+var images = document.getElementsByTagName("img")
+var slide = document.getElementById("slide");
+var slide_image = document.getElementById("slide_image");
+for( var i=0; i<images.length; i++ ) {
+  images[i].addEventListener("click", function(e){
+    if( slide.classList.contains("show") ) {
+      slide.classList.remove("show");
+    } else {
+      slide.classList.add("show");
+      slide_image.src = e.srcElement.src;
+    }
+  });
+}
+
+</script>
+</body></html>

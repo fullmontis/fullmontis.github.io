@@ -47,7 +47,7 @@ if( view !== null ) {
     }
 }
 
-function openView(toggle, img, dest, is_comic) {
+function openView( toggle, img, dest, is_comic ) {
     return function() {
 	    if( toggle ) {
 	        if( is_comic ) {
@@ -99,10 +99,10 @@ if( contact !== null ) {
   console.log(contact,contact2);
 }
 
-c1 = ".gg/";
-c2 = "https://";
-c3 = "discord";
-c4 = "jpQEAcDPyU";
+var c1 = ".gg/";
+var c2 = "https://";
+var c3 = "discord";
+var c4 = "jpQEAcDPyU";
 
 document.getElementById("discord").href=c2+c3+c1+c4;
 document.getElementById("discord2").innerHTML = c4;
@@ -111,5 +111,6 @@ var link_list = document.getElementsByClassName("link-list")[0];
 var open_links = document.getElementById("open-links");
 open_links.addEventListener("click", function() {
     link_list.style.maxHeight = "none";
+    link_list.style.maskImage = "none";
     open_links.style.display = "none";
 });
