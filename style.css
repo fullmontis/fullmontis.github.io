@@ -159,6 +159,9 @@ p.wide{ margin-bottom: 2.5em;}
 .game-details { font-size: 0.9em; color:white; line-height: 1.3em;margin-top:0.5em; display:block; }
 
 .area { max-width: 600px; margin-left: auto; margin-right: auto; padding: 0em; margin-bottom: 3em; max-width: 100vw; }
+.gallery { width:95vw; display:flex; align-items: center; justify-content: center; flex-wrap: wrap; max-height: 700px; overflow: hidden; }
+.gallery-pic { width:300px; height: 250px; overflow: hidden; position: relative; border-radius: 25px; margin: 0 1em 1em 0; }
+.gallery-img { position: absolute;  display:block;top:0;left:0;  }
 .leftaligned { text-align: left; }
 
 .art-thumb { width: 80vw; height: 64vw; max-width: 320px; max-height: 254px; border-radius: 25px; margin:10px; display: inline-block; }
@@ -191,11 +194,11 @@ p.wide{ margin-bottom: 2.5em;}
 .link-small { display: inline;}
 .link-big { display: none !important;}
 
-.link-list { margin: 0 auto; padding:0;  margin: 0; width: 100%; max-height: 400px; overflow: hidden; text-align: center;     
-             -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
-             -webkit-mask-image: linear-gradient(to bottom, black 0%,  transparent 100%);
-             mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
-             mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%); }
+.link-list { margin: 0 auto; padding:0;  margin: 0; width: 100%; max-height: 400px; overflow: hidden; text-align: center;  }
+.masked {-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
+         -webkit-mask-image: linear-gradient(to bottom, black 0%,  transparent 100%);
+         mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
+         mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%); }
 .link-list > li { display: block; width:100%; }
 .link-list > li::before { content: none; }
 .link-button { width: 25px; vertical-align: middle; display:inline; }
@@ -206,14 +209,14 @@ p.wide{ margin-bottom: 2.5em;}
 .commission { background-color: #8e4fd270; border-radius: 25px; display: inline-block; padding: 0.5em; width: 95%;  max-width: 500px; margin-bottom: 2em; }
 span.color { color: #e2d5ff; }
 
-.oc-area {width: 100vw; display: flex; align-items: stretch; justify-content: space-evenly; flex-wrap: wrap;}
-.oc { position:relative; overflow: hidden; width: 200px; height: 500px; border-radius: 1em; margin:0 auto; background-color: #110f31; margin: 0 1em 1em 0;}
+.oc-area {width: 95vw; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; max-height: 800px;}
+.oc { position:relative; overflow: hidden; width: 200px; height: 500px; border-radius: 1em; background-color: #110f31; margin: 0 1em 1em 0;}
 .oc-img { position: absolute; height: 100%; display:block;top:0;left:0;              
           -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
           -webkit-mask-image: linear-gradient(to bottom, black 0%,  transparent 100%);
           mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
           mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 100%); }
-.oc-info { font-family: Nunito, sans;text-align: left; font-size: 0.9em; position: absolute;  bottom:0; padding: 2em 1em; line-height:1.1em; font-size:0.8em; }
+.oc-info { font-family: Nunito, sans;text-align: left; font-size: 0.9em; position: absolute;  bottom:0; padding: 2em 1em; line-height:1.1em; font-size:0.8em; height: 90px; }
 .oc-name{ font-size: 1.3em; margin-bottom: 0.5em;}
 .oc-subtitle {font-size: 0.9em; color: #cec3f2; margin-bottom: 0.5em;}
 .bold { color: #bfa8ff; font-weight: bold; }
